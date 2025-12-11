@@ -2,6 +2,8 @@ import HeroSection from "@/components/home/HeroSection";
 import QuickAccessGrid from "@/components/home/QuickAccessGrid";
 import NewsFeed from "@/components/home/NewsFeed";
 import UpcomingEvents from "@/components/home/UpcomingEvents";
+import PartnersLoop from "@/components/home/PartnersLoop";
+import GallerySection from "@/components/home/GallerySection";
 
 export default function Home() {
   return (
@@ -20,6 +22,10 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <GallerySection />
+
+      <PartnersLoop />
     </div>
   );
 }
