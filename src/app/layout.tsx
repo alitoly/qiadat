@@ -15,6 +15,8 @@ export const metadata: Metadata = {
   description: "Official platform for Oman Volunteer Center",
 };
 
+import Threads from "@/components/Threads";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -22,7 +24,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} antialiased min-h-screen flex flex-col`}>
+      <body className={`${inter.variable} antialiased min-h-screen flex flex-col relative`}>
+        <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', zIndex: -1, opacity: 0.5 }}>
+          <Threads amplitude={1} distance={0} enableMouseInteraction={true} />
+        </div>
         <Navbar />
         <main className="flex-1 flex flex-col">
           {children}

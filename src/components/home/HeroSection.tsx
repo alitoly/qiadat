@@ -1,8 +1,7 @@
 export default function HeroSection() {
     return (
-        <section className="relative w-full bg-navy text-white overflow-hidden pb-24">
+        <section className="relative w-full text-white overflow-hidden pb-24">
             {/* Background Decor */}
-            <div className="absolute inset-0 bg-gradient-to-br from-navy to-[#2a3765]"></div>
             <div className="absolute right-0 top-0 h-full w-1/2 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-white/5 via-transparent to-transparent opacity-50"></div>
 
             {/* Content */}
