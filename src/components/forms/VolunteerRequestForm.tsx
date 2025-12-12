@@ -46,7 +46,7 @@ export default function VolunteerRequestForm() {
             const calculatedMinDate = addWorkingDays(today, daysNotice);
             const formattedMin = format(calculatedMinDate, "yyyy-MM-dd");
             setMinDate(formattedMin);
-            setValidationMessage(`For ${count} volunteers, minimum notice is ${daysNotice} working days. Earliest start: ${format(calculatedMinDate, "MMM dd, yyyy")}`);
+            setValidationMessage(`لعدد ${count} متطوعين، فترة الإشعار المطلوبة هي ${daysNotice} أيام عمل. أقرب موعد للبدء: ${format(calculatedMinDate, "dd-MM-yyyy")}`);
         } else {
             setMinDate(format(new Date(), "yyyy-MM-dd"));
             setValidationMessage("");
@@ -63,21 +63,21 @@ export default function VolunteerRequestForm() {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        alert("Request Submitted! (Demo)");
+        alert("تم إرسال الطلب! (تجريبي)");
     };
 
     return (
         <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-                <label className="block text-sm font-medium text-navy mb-2">Initiative/Event Title</label>
+                <label className="block text-sm font-medium text-navy mb-2">عنوان المبادرة / الفعالية</label>
                 <div className="relative">
-                    <Briefcase className="absolute left-3 top-3 text-gray-400" size={18} />
+                    <Briefcase className="absolute right-3 top-3 text-gray-400" size={18} />
                     <input
                         type="text"
                         name="title"
                         required
-                        className="w-full rounded-lg border border-gray-300 pl-10 p-2.5 focus:border-navy focus:ring-navy"
-                        placeholder="e.g. Beach Cleanup Drive"
+                        className="w-full rounded-lg border border-gray-300 pr-10 p-2.5 focus:border-navy focus:ring-navy"
+                        placeholder="مثال: حملة تنظيف الشاطئ"
                         value={formData.title}
                         onChange={handleChange}
                     />
@@ -85,35 +85,35 @@ export default function VolunteerRequestForm() {
             </div>
 
             <div>
-                <label className="block text-sm font-medium text-navy mb-2">Number of Volunteers Needed</label>
+                <label className="block text-sm font-medium text-navy mb-2">عدد المتطوعين المطلوب</label>
                 <div className="relative">
-                    <Users className="absolute left-3 top-3 text-gray-400" size={18} />
+                    <Users className="absolute right-3 top-3 text-gray-400" size={18} />
                     <input
                         type="number"
                         name="volunteersCount"
                         required
                         min="1"
-                        className="w-full rounded-lg border border-gray-300 pl-10 p-2.5 focus:border-navy focus:ring-navy"
-                        placeholder="e.g. 10"
+                        className="w-full rounded-lg border border-gray-300 pr-10 p-2.5 focus:border-navy focus:ring-navy"
+                        placeholder="مثال: 10"
                         value={formData.volunteersCount || ""}
                         onChange={handleChange}
                     />
                 </div>
                 <p className="mt-1 text-xs text-gray-500">
-                    1-15: 5 working days notice | 15-30: 10 days | 30+: 20 days
+                    1-15: 5 أيام عمل إشعار | 15-30: 10 أيام | 30+: 20 يوم
                 </p>
             </div>
 
             <div>
-                <label className="block text-sm font-medium text-navy mb-2">Start Date</label>
+                <label className="block text-sm font-medium text-navy mb-2">تاريخ البدء</label>
                 <div className="relative">
-                    <Calendar className="absolute left-3 top-3 text-gray-400" size={18} />
+                    <Calendar className="absolute right-3 top-3 text-gray-400" size={18} />
                     <input
                         type="date"
                         name="startDate"
                         required
                         min={minDate}
-                        className="w-full rounded-lg border border-gray-300 pl-10 p-2.5 focus:border-navy focus:ring-navy"
+                        className="w-full rounded-lg border border-gray-300 pr-10 p-2.5 focus:border-navy focus:ring-navy"
                         value={formData.startDate}
                         onChange={handleChange}
                     />
@@ -126,13 +126,13 @@ export default function VolunteerRequestForm() {
             </div>
 
             <div>
-                <label className="block text-sm font-medium text-navy mb-2">Description</label>
+                <label className="block text-sm font-medium text-navy mb-2">الوصف</label>
                 <textarea
                     name="description"
                     rows={4}
                     required
                     className="w-full rounded-lg border border-gray-300 p-3 focus:border-navy focus:ring-navy"
-                    placeholder="Describe the tasks and requirements..."
+                    placeholder="صف المهام والمتطلبات..."
                     value={formData.description}
                     onChange={handleChange}
                 ></textarea>
@@ -142,7 +142,7 @@ export default function VolunteerRequestForm() {
                 type="submit"
                 className="w-full rounded-lg bg-navy px-5 py-3 text-center text-sm font-semibold text-white hover:bg-opacity-90 transition-colors"
             >
-                Submit Request
+                إرسال الطلب
             </button>
         </form>
     );

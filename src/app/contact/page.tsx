@@ -4,7 +4,7 @@ export default function ContactPage() {
     return (
         <div className="bg-gray-50 min-h-screen py-12">
             <div className="container mx-auto px-4">
-                <h1 className="text-4xl font-bold text-navy text-center mb-12">Get in Touch</h1>
+                <h1 className="text-4xl font-bold text-navy text-center mb-12">تواصل معنا</h1>
 
                 <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
                     {/* Info Cards */}
@@ -14,8 +14,8 @@ export default function ContactPage() {
                                 <MapPin size={24} />
                             </div>
                             <div>
-                                <h3 className="font-bold text-navy text-lg mb-1">Our Location</h3>
-                                <p className="text-gray-600">Muscat, Sultanate of Oman</p>
+                                <h3 className="font-bold text-navy text-lg mb-1">موقعنا</h3>
+                                <p className="text-gray-600">مسقط، سلطنة عمان</p>
                             </div>
                         </div>
 
@@ -24,8 +24,8 @@ export default function ContactPage() {
                                 <Phone size={24} />
                             </div>
                             <div>
-                                <h3 className="font-bold text-navy text-lg mb-1">Phone Number</h3>
-                                <a href="tel:+96876797992" className="text-gray-600 hover:text-navy transition-colors">
+                                <h3 className="font-bold text-navy text-lg mb-1">رقم الهاتف</h3>
+                                <a href="tel:+96876797992" className="text-gray-600 hover:text-navy transition-colors" dir="ltr">
                                     +968 76797992
                                 </a>
                             </div>
@@ -36,7 +36,7 @@ export default function ContactPage() {
                                 <Mail size={24} />
                             </div>
                             <div>
-                                <h3 className="font-bold text-navy text-lg mb-1">Email Address</h3>
+                                <h3 className="font-bold text-navy text-lg mb-1">البريد الإلكتروني</h3>
                                 <a href="mailto:info@voluntary.qa" className="text-gray-600 hover:text-navy transition-colors">
                                     info@voluntary.qa
                                 </a>
@@ -48,15 +48,15 @@ export default function ContactPage() {
                                 <Clock size={24} />
                             </div>
                             <div>
-                                <h3 className="font-bold text-navy text-lg mb-1">Working Hours</h3>
-                                <p className="text-gray-600">Sunday - Thursday: 08:30 AM - 02:30 PM</p>
+                                <h3 className="font-bold text-navy text-lg mb-1">ساعات العمل</h3>
+                                <p className="text-gray-600">الأحد - الخميس: 08:30 صباحًا - 07:30 مساءً</p>
                             </div>
                         </div>
                     </div>
 
                     {/* Map Placeholder */}
                     <div className="bg-gray-200 rounded-2xl min-h-[400px] flex items-center justify-center text-gray-400">
-                        Interactive Map Component
+                        خريطة تفاعلية
                     </div>
                 </div>
             </div>

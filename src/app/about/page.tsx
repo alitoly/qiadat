@@ -6,9 +6,9 @@ export default function AboutPage() {
             {/* Header */}
             <section className="bg-navy py-20 text-white">
                 <div className="container mx-auto px-4 text-center">
-                    <h1 className="text-4xl font-bold mb-4">About Qiadat</h1>
-                    <p className="opacity-90 max-w-2xl mx-auto">
-                        The Oman Volunteer Center is dedicated to fostering a culture of volunteering and community service across the Sultanate.
+                    <h1 className="text-4xl font-bold mb-4">من نحن</h1>
+                    <p className="opacity-90 max-w-2xl mx-auto leading-relaxed">
+                        يُعدّ مركز عُمان التطوعي المظلة الوطنية الشاملة لاحتضان وتنظيم الأنشطة والمبادرات التطوعية في السلطنة، انسجامًا مع رؤية وزارة الثقافة والرياضة والشباب واستراتيجيتها الرامية إلى تعزيز ثقافة العمل التطوعي وترسيخ قيمه في المجتمع العُماني.
                     </p>
                 </div>
             </section>
@@ -16,27 +16,27 @@ export default function AboutPage() {
             {/* Vision & Mission */}
             <section className="py-16 container mx-auto px-4">
                 <div className="grid md:grid-cols-2 gap-12">
-                    <div className="bg-gray-50 p-8 rounded-2xl border-l-4 border-navy">
+                    <div className="bg-gray-50 p-8 rounded-2xl border-r-4 border-navy">
                         <div className="flex items-center gap-4 mb-4">
                             <div className="p-3 bg-navy text-white rounded-lg">
                                 <Compass size={24} />
                             </div>
-                            <h2 className="text-2xl font-bold text-navy">Our Vision</h2>
+                            <h2 className="text-2xl font-bold text-navy">الرؤية</h2>
                         </div>
                         <p className="text-gray-700 leading-relaxed">
-                            To be the premier national hub for voluntary work, creating a sustainable ecosystem that empowers individuals to contribute effectively to Oman's development.
+                            أن يكون مركز عُمان التطوعي المنصة الوطنية الرائدة في تمكين العمل التطوعي وتعزيز أثره التنموي، وبناء مجتمع واعٍ ومبادرات مستدامة تسهم في تحقيق رؤية عُمان 2040.
                         </p>
                     </div>
 
-                    <div className="bg-gray-50 p-8 rounded-2xl border-l-4 border-cream">
+                    <div className="bg-gray-50 p-8 rounded-2xl border-r-4 border-cream">
                         <div className="flex items-center gap-4 mb-4">
                             <div className="p-3 bg-cream text-navy rounded-lg">
                                 <Target size={24} />
                             </div>
-                            <h2 className="text-2xl font-bold text-navy">Our Mission</h2>
+                            <h2 className="text-2xl font-bold text-navy">الرسالة</h2>
                         </div>
                         <p className="text-gray-700 leading-relaxed">
-                            Organizing and enabling voluntary efforts through a digital platform that connects volunteers with opportunities, ensuring quality, transparency, and impact.
+                            تنظيم وتطوير العمل التطوعي في سلطنة عُمان عبر منصة وطنية متكاملة تربط المتطوعين بالفرص العامة والتخصصية، وتمكّن الجهات والمبادرات من تنفيذ أعمال تطوعية عالية الجودة ذات أثر تنموي.
                         </p>
                     </div>
                 </div>
@@ -45,15 +45,15 @@ export default function AboutPage() {
             {/* Values */}
             <section className="py-16 bg-gray-50">
                 <div className="container mx-auto px-4">
-                    <h2 className="text-3xl font-bold text-center text-navy mb-12">Our Core Values</h2>
+                    <h2 className="text-3xl font-bold text-center text-navy mb-12">القيم</h2>
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
                         {[
-                            { name: "Integrity", icon: Shield },
-                            { name: "Commitment", icon: Heart },
-                            { name: "Excellence", icon: Star },
-                            { name: "Teamwork", icon: Users },
-                            { name: "Impact", icon: Zap },
-                            { name: "Inclusivity", icon: Globe },
+                            { name: "المواطنة والمسؤولية", icon: Shield },
+                            { name: "العمل بروح الفريق", icon: Users },
+                            { name: "الابتكار والتطوير", icon: Zap },
+                            { name: "التمكين وبناء القدرات", icon: Star },
+                            { name: "الاستدامة", icon: Globe },
+                            { name: "الشراكة والتكامل", icon: Heart },
                         ].map((value, i) => {
                             const Icon = value.icon;
                             return (

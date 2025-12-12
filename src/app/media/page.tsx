@@ -5,13 +5,13 @@ import NewsFeed from "@/components/home/NewsFeed"; // Reusing NewsFeed or parts 
 import clsx from "clsx";
 
 export default function MediaPage() {
-    const tabs = ["All", "Events", "Initiatives", "News", "Announcements"];
-    const [activeTab, setActiveTab] = useState("All");
+    const tabs = ["الكل", "الفعاليات", "المبادرات", "الأخبار", "الإعلانات"];
+    const [activeTab, setActiveTab] = useState("الكل");
 
     return (
         <div className="bg-gray-50 min-h-screen py-12">
             <div className="container mx-auto px-4">
-                <h1 className="text-4xl font-bold text-navy mb-8">Media Center</h1>
+                <h1 className="text-4xl font-bold text-navy mb-8">المركز الإعلامي</h1>
 
                 {/* Tabs */}
                 <div className="flex flex-wrap gap-2 mb-12 border-b border-gray-200 pb-1">
@@ -33,7 +33,7 @@ export default function MediaPage() {
 
                 {/* Content Area */}
                 <div>
-                    <p className="text-gray-500 mb-8">Showing results for: <span className="font-bold text-navy">{activeTab}</span></p>
+                    <p className="text-gray-500 mb-8">عرض النتائج لـ: <span className="font-bold text-navy">{activeTab}</span></p>
 
                     {/* Using basic placeholder content for tabs */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -44,10 +44,10 @@ export default function MediaPage() {
                                 </div>
                                 <div className="p-6">
                                     <span className="text-xs font-bold text-cream bg-navy px-2 py-1 rounded mb-2 inline-block">
-                                        {activeTab === "All" ? "News" : activeTab}
+                                        {activeTab === "الكل" ? "أخبار" : activeTab}
                                     </span>
-                                    <h3 className="font-bold text-navy text-lg mb-2 group-hover:underline">Media Item Title {item}</h3>
-                                    <p className="text-gray-500 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    <h3 className="font-bold text-navy text-lg mb-2 group-hover:underline">عنوان الخبر {item}</h3>
+                                    <p className="text-gray-500 text-sm">نص توضيحي مختصر للخبر أو الفعالية يظهر هنا...</p>
                                 </div>
                             </div>
                         ))}

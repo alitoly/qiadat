@@ -15,7 +15,7 @@ export default function BookingForm() {
     const handleDateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const selectedDate = new Date(e.target.value);
         if (isFriday(selectedDate) || isSaturday(selectedDate)) {
-            setError("Bookings are not available on Fridays and Saturdays.");
+            setError("لا يتوفر الحجز أيام الجمعة والسبت.");
             setDate("");
         } else {
             setError("");
@@ -48,30 +48,30 @@ export default function BookingForm() {
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         if (!date || !time) return;
-        alert(`Booking Requested for ${date} at ${time}`);
+        alert(`تم طلب الحجز ليوم ${date} الساعة ${time}`);
     };
 
     return (
         <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-                <label className="block text-sm font-medium text-navy mb-2">Select Date</label>
+                <label className="block text-sm font-medium text-navy mb-2">اختر التاريخ</label>
                 <div className="relative">
-                    <Calendar className="absolute left-3 top-3 text-gray-400" size={18} />
+                    <Calendar className="absolute right-3 top-3 text-gray-400" size={18} />
                     <input
                         type="date"
                         required
                         min={minDate}
-                        className="w-full rounded-lg border border-gray-300 pl-10 p-2.5 focus:border-navy focus:ring-navy"
+                        className="w-full rounded-lg border border-gray-300 pr-10 p-2.5 focus:border-navy focus:ring-navy"
                         onChange={handleDateChange}
                         value={date}
                     />
                 </div>
-                <p className="mt-1 text-xs text-gray-500">Bookings require at least 2 days notice.</p>
+                <p className="mt-1 text-xs text-gray-500">الحجز يتطلب إشعار قبل يومين على الأقل.</p>
                 {error && <p className="mt-2 text-sm text-red-600">{error}</p>}
             </div>
 
             <div>
-                <label className="block text-sm font-medium text-navy mb-2">Select Time</label>
+                <label className="block text-sm font-medium text-navy mb-2">اختر الوقت</label>
                 <div className="grid grid-cols-4 gap-2">
                     {timeSlots.map((slot) => (
                         <button
@@ -93,7 +93,7 @@ export default function BookingForm() {
                     ))}
                 </div>
                 <p className="mt-2 text-xs text-gray-500 flex items-center gap-1">
-                    <Clock size={12} /> Sunday - Thursday (08:30 AM - 07:30 PM)
+                    <Clock size={12} /> الأحد - الخميس (08:30 ص - 07:30 م)
                 </p>
             </div>
 
@@ -102,7 +102,7 @@ export default function BookingForm() {
                 disabled={!date || !time}
                 className="w-full rounded-lg bg-navy px-5 py-3 text-center text-sm font-semibold text-white hover:bg-opacity-90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
-                Confirm Booking
+                تأكيد الحجز
             </button>
         </form>
     );

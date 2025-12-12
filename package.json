@@ -9,9 +9,16 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@heroui/date-picker": "^2.3.28",
+    "@heroui/system": "^2.4.23",
+    "@heroui/theme": "^2.4.23",
+    "@radix-ui/react-label": "^2.1.8",
+    "@radix-ui/react-separator": "^1.1.8",
+    "@radix-ui/react-slot": "^1.2.4",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "date-fns": "^4.1.0",
+    "framer-motion": "^12.23.26",
     "gl-matrix": "^3.4.4",
     "gsap": "^3.14.1",
     "lucide-react": "^0.556.0",

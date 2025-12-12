@@ -5,36 +5,36 @@ import { Users, Calendar, Lightbulb, Building } from "lucide-react";
 
 const services = [
     {
-        title: "Request Volunteer",
+        title: "طلب متطوعين",
         icon: Users,
         href: "/request/volunteer",
         color: "bg-navy",
         textColor: "text-white",
-        description: "Request volunteers for your event or initiative."
+        description: "اطلب متطوعين لفعاليتك أو مبادرتك."
     },
     {
-        title: "Event Enrollment",
+        title: "الاشتراك في الفعاليات",
         icon: Calendar,
         href: "/enrollment",
         color: "bg-cream",
         textColor: "text-navy",
-        description: "Join upcoming events like Muscat Marathon."
+        description: "انضم إلى الفعاليات القادمة مثل ماراثون مسقط."
     },
     {
-        title: "Initiative Request",
+        title: "طلب مبادرة",
         icon: Lightbulb,
         href: "/request/initiative",
         color: "bg-navy",
         textColor: "text-white",
-        description: "Submit a new initiative proposal for approval."
+        description: "قدم مقترح مبادرة جديدة للموافقة عليها."
     },
     {
-        title: "Hall Booking",
+        title: "حجز قاعة",
         icon: Building,
         href: "/booking/hall",
         color: "bg-cream",
         textColor: "text-navy",
-        description: "Book our multipurpose halls for your events."
+        description: "احجز قاعاتنا متعددة الأغراض لفعالياتك."
     },
 ];
 
@@ -67,7 +67,7 @@ export default function QuickAccessGrid() {
                                     </p>
                                 </div>
                                 <div className="mt-2 text-xs font-semibold uppercase tracking-wider opacity-75 group-hover:opacity-100 flex items-center gap-2">
-                                    Explore <span>&rarr;</span>
+                                    تصفح <span>&larr;</span>
                                 </div>
                             </div>
                         </Link>

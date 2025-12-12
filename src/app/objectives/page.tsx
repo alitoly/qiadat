@@ -1,11 +1,14 @@
 export default function ObjectivesPage() {
     const objectives = [
-        "Promote the culture of volunteering among all segments of society.",
-        "Regulate and organize voluntary work efforts in the Sultanate.",
-        "Connect volunteers with institutions and organizations needing support.",
-        "Provide training and development for volunteers.",
-        "Highlight and reward distinguished voluntary initiatives.",
-        "Create a unified database for volunteers and opportunities."
+        "تعزيز ثقافة العمل التطوعي ونشر الوعي بأهمية المشاركة المجتمعية بين مختلف فئات المجتمع.",
+        "تنظيم وإدارة العمل التطوعي من خلال وضع معايير واضحة وإجراءات موحدة للفرص والمبادرات التطوعية.",
+        "توفير منصة وطنية متكاملة تربط المتطوعين بالفرص العامة والتخصصية، وتسهّل الوصول إليها وتوثيقها.",
+        "تمكين المتطوعين وتطوير قدراتهم عبر برامج تدريبية متقدمة تُعزز مهاراتهم وتؤهلهم للمشاركة الفعّالة.",
+        "دعم المبادرات المجتمعية وتذليل التحديات المؤسسية والتنظيمية أمام الفرق والمشاريع التطوعية.",
+        "تعزيز الشراكات الوطنية مع القطاع الحكومي والخاص والمجتمع المدني والمؤسسات الأكاديمية لدعم منظومة التطوع.",
+        "تطوير التطوع التخصصي وتوجيه المهارات المهنية للمتطوعين نحو تلبية احتياجات المجتمع والمؤسسات.",
+        "توثيق الأثر التطوعي من خلال بناء قواعد بيانات ولوحات مؤشرات تُظهر حجم المشاركة وأثرها الاجتماعي والتنموي.",
+        "استدامة العمل التطوعي عبر تصميم برامج طويلة المدى تعزز استمرارية المبادرات وتوسّع أثرها."
     ];
 
     return (
@@ -17,7 +20,7 @@ export default function ObjectivesPage() {
             </div>
 
             <div className="container mx-auto px-4 py-16 relative z-10">
-                <h1 className="text-4xl font-bold text-navy text-center mb-16">Strategic Objectives</h1>
+                <h1 className="text-4xl font-bold text-navy text-center mb-16">الأهداف الاستراتيجية</h1>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {objectives.map((obj, i) => (
