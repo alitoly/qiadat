@@ -28,7 +28,6 @@ export default function Navbar() {
             bgColor: "#170D27",
             textColor: "#fff",
             links: [
-                { label: "عامة الخدمات", href: "/services", ariaLabel: "All Services" },
                 { label: "طلب مبادرة", href: "/request/initiative", ariaLabel: "Request Initiative" },
                 { label: "حجز قاعة", href: "/booking/hall", ariaLabel: "Book Hall" },
                 { label: "الاشتراك في الفعاليات", href: "/enrollment", ariaLabel: "Event Enrollment" },
