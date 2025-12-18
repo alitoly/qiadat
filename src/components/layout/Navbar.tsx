@@ -9,7 +9,7 @@ export default function Navbar() {
     const router = useRouter();
 
     const handleGetStarted = () => {
-        router.push("/request/volunteer");
+        router.push("/home");
     };
 
     const items: CardNavItem[] = [
