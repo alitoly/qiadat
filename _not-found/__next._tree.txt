@@ -1,0 +1,4 @@
+:HL["/qiadat/_next/static/chunks/9469c100c035a6c5.css","style"]
+:HL["/qiadat/_next/static/chunks/afe9e3382210806a.css","style"]
+:HL["/qiadat/_next/static/chunks/1016b4fd9e561b7d.css","style"]
+0:{"buildId":"gCuxBGvlLa9sy8Xx6I5lx","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"/_not-found","paramType":null,"paramKey":"/_not-found","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}

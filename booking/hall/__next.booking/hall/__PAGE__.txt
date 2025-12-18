@@ -1,0 +1,6 @@
+1:"$Sreact.fragment"
+2:I[35825,["/qiadat/_next/static/chunks/14910d05efb29e47.js","/qiadat/_next/static/chunks/16104087b8123103.js","/qiadat/_next/static/chunks/f260b3bc9eae361a.js"],"default"]
+3:I[16068,["/qiadat/_next/static/chunks/9d1a81641a0d5d24.js","/qiadat/_next/static/chunks/e052e63684259b64.js"],"OutletBoundary"]
+4:"$Sreact.suspense"
+0:{"buildId":"gCuxBGvlLa9sy8Xx6I5lx","rsc":["$","$1","c",{"children":[["$","div",null,{"className":"bg-gray-50 min-h-screen py-12","children":["$","div",null,{"className":"container mx-auto px-4 max-w-xl","children":[["$","h1",null,{"className":"text-3xl font-bold text-navy mb-2","children":"طلب حجز قاعة"}],["$","p",null,{"className":"text-gray-600 mb-8","children":"تحقق من التوفر واحجز قاعاتنا متعددة الأغراض لفعالياتك."}],["$","div",null,{"className":"bg-white rounded-2xl p-8 shadow-sm border border-gray-100","children":["$","$L2",null,{}]}]]}]}],[["$","script","script-0",{"src":"/qiadat/_next/static/chunks/f260b3bc9eae361a.js","async":true}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"loading":null,"isPartial":false}
+5:null
