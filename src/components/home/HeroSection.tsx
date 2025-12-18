@@ -1,3 +1,5 @@
+import GlassSurface from "../GlassSurface";
+
 export default function HeroSection() {
     return (
         <section className="relative w-full text-white overflow-hidden pb-24">
@@ -20,12 +22,37 @@ export default function HeroSection() {
                         انضم كمتطوع، أو سجّل مبادرتك، أو اعرض فرصة تطوعية عبر منصة موحدة وموثوقة
                     </p>
                     <div className="flex flex-wrap gap-4 pt-4">
-                        <button className="rounded-full bg-cream px-8 py-3 font-bold text-navy transition hover:bg-white hover:shadow-[0_0_20px_rgba(239,232,186,0.5)]">
-                            ابدأ رحلتك
-                        </button>
-                        <button className="rounded-full border border-white/20 px-8 py-3 font-medium text-white transition hover:bg-white/10 backdrop-blur-sm">
-                            اكتشف المزيد
-                        </button>
+                        <GlassSurface
+                            as="button"
+                            width="auto"
+                            height="auto"
+                            borderRadius={50}
+                            borderWidth={0.2}
+                            brightness={110}
+                            blur={10}
+                            opacity={0.9}
+                            backgroundOpacity={0.6} // Cream-ish look/Light
+                            className="font-bold text-navy transition-all duration-300 hover:scale-105"
+                            style={{ color: '#1F2A52', padding: 0 }} // Navy text, reset padding
+                        >
+                            <span className="px-8 py-3 block">ابدأ رحلتك</span>
+                        </GlassSurface>
+
+                        <GlassSurface
+                            as="button"
+                            width="auto"
+                            height="auto"
+                            borderRadius={50}
+                            borderWidth={0.5}
+                            brightness={100}
+                            blur={8}
+                            opacity={0.7}
+                            backgroundOpacity={0.2}
+                            className="font-medium text-white transition-all duration-300 hover:bg-white/10"
+                            style={{ padding: 0 }}
+                        >
+                            <span className="px-8 py-3 block">اكتشف المزيد</span>
+                        </GlassSurface>
                     </div>
                 </div>
             </div>
