@@ -17,7 +17,7 @@ export default function Navbar() {
             label: "عن المركز",
             href: "/about",
             ariaLabel: "About Center",
-            bgColor: "#0D0716",
+            bgColor: "#4e04beff",
             textColor: "#fff",
             links: [
                 { label: "من نحن", href: "/about#who-we-are", ariaLabel: "About Company" },
@@ -29,7 +29,7 @@ export default function Navbar() {
             label: "الخدمات",
             href: "/services",
             ariaLabel: "Our Services",
-            bgColor: "#170D27",
+            bgColor: "#ddb917ff",
             textColor: "#fff",
             links: [
                 { label: "طلب مبادرة", href: "/services#initiative", ariaLabel: "Request Initiative" },
@@ -40,7 +40,7 @@ export default function Navbar() {
         },
         {
             label: "تواصل معنا",
-            bgColor: "#271E37",
+            bgColor: "#4e04beff",
             textColor: "#fff",
             links: [
                 { label: "اتصل بنا", href: "/contact", ariaLabel: "Contact Us" },

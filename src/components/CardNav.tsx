@@ -3,6 +3,7 @@ import { gsap } from 'gsap';
 // use your own icon import if react-icons is not available
 import { GoArrowUpRight } from 'react-icons/go';
 import './CardNav.css';
+import GlassSurface from './GlassSurface';
 
 type CardNavLink = {
   label: string;
@@ -160,7 +161,23 @@ const CardNav: React.FC<CardNavProps> = ({
 
   return (
     <div className={`card-nav-container ${className}`}>
-      <nav ref={navRef} className={`card-nav ${isExpanded ? 'open' : ''}`} style={{ backgroundColor: baseColor }}>
+      <GlassSurface
+        as="nav"
+        ref={navRef}
+        className={`card-nav ${isExpanded ? 'open' : ''}`}
+        width="100%"
+        height={60} // Initial height
+        borderRadius={30}
+        brightness={20} // Low brightness for dark glass
+        opacity={0.8}
+        blur={8}
+        borderWidth={0.1}
+        backgroundOpacity={0.5} // Ensure visible background tint
+        mixBlendMode="normal"
+        style={{
+          padding: 0 // Keep padding 0 to avoid layout shift
+        }}
+      >
         <div className="card-nav-top">
           <div
             className={`hamburger-menu ${isHamburgerOpen ? 'open' : ''}`}
@@ -168,7 +185,7 @@ const CardNav: React.FC<CardNavProps> = ({
             role="button"
             aria-label={isExpanded ? 'Close menu' : 'Open menu'}
             tabIndex={0}
-            style={{ color: menuColor || '#000' }}
+            style={{ color: menuColor || '#fff' }}
           >
             <div className="hamburger-line" />
             <div className="hamburger-line" />
@@ -178,13 +195,23 @@ const CardNav: React.FC<CardNavProps> = ({
             <img src={logo} alt={logoAlt} className="logo" />
           </div>
 
-          <button
+          <GlassSurface
+            as="button"
             type="button"
-            className="card-nav-cta-button"
-            style={{ backgroundColor: buttonBgColor, color: buttonTextColor }}
+            className="card-nav-cta-button p-0 overflow-hidden"
+            width="auto"
+            height="auto"
+            borderRadius={20}
+            brightness={110}
+            opacity={0.6}
+            blur={8}
+            borderWidth={0.2}
+            backgroundOpacity={0.4} // Make button visible
+            style={{ color: buttonTextColor }}
+            onClick={() => { }} // Pass a handler if needed, or rely on parent
           >
-            Get Started
-          </button>
+            <span className="px-5 py-2 block font-medium">الرئيسية</span>
+          </GlassSurface>
         </div>
 
         <div className="card-nav-content" aria-hidden={!isExpanded}>
@@ -193,19 +220,19 @@ const CardNav: React.FC<CardNavProps> = ({
               key={`${item.label}-${idx}`}
               className="nav-card"
               ref={setCardRef(idx)}
-              style={{ backgroundColor: item.bgColor, color: item.textColor }}
+              style={{ backgroundColor: item.bgColor }}
             >
               {item.href ? (
                 <a
                   className="nav-card-label block no-underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white/20 rounded-lg"
                   href={item.href}
                   aria-label={item.ariaLabel || item.label}
-                  style={{ color: 'inherit' }}
+                  style={{ color: item.textColor }} // Use item text color
                 >
                   {item.label}
                 </a>
               ) : (
-                <div className="nav-card-label">{item.label}</div>
+                <div className="nav-card-label" style={{ color: item.textColor }}>{item.label}</div>
               )}
               <div className="nav-card-links">
                 {item.links?.map((lnk, i) => (
@@ -218,7 +245,7 @@ const CardNav: React.FC<CardNavProps> = ({
             </div>
           ))}
         </div>
-      </nav>
+      </GlassSurface>
     </div>
   );
 };
