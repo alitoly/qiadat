@@ -27,13 +27,15 @@ export default function Navbar() {
         },
         {
             label: "الخدمات",
+            href: "/services",
+            ariaLabel: "Our Services",
             bgColor: "#170D27",
             textColor: "#fff",
             links: [
-                { label: "طلب مبادرة", href: "/request/initiative", ariaLabel: "Request Initiative" },
-                { label: "حجز قاعة", href: "/booking/hall", ariaLabel: "Book Hall" },
-                { label: "الاشتراك في الفعاليات", href: "/enrollment", ariaLabel: "Event Enrollment" },
-                { label: "طلب متطوعين", href: "/request/volunteer", ariaLabel: "Request Volunteer" }
+                { label: "طلب مبادرة", href: "/services#initiative", ariaLabel: "Request Initiative" },
+                { label: "حجز قاعة", href: "/services#hall", ariaLabel: "Book Hall" },
+                { label: "الاشتراك في الفعاليات", href: "/services#enrollment", ariaLabel: "Event Enrollment" },
+                { label: "طلب متطوعين", href: "/services#volunteer", ariaLabel: "Request Volunteer" }
             ]
         },
         {
