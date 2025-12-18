@@ -10,11 +10,14 @@ export default function HeroSection() {
                     <div className="inline-block rounded-full bg-white/10 px-4 py-1.5 text-sm font-medium backdrop-blur-sm border border-white/10 text-cream">
                         تمكين المجتمعات
                     </div>
-                    <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-                        اصنع الأثر مع <span className="text-cream">وهج</span>
+                    <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+                        اصنع الأثر مع <span className="text-cream">مركز عمان التطوعي</span>
                     </h1>
                     <p className="text-lg md:text-xl text-gray-300 max-w-2xl leading-relaxed">
-                        انضم إلى المنصة الوطنية الرائدة للعمل التطوعي في سلطنة عُمان. شارك في المبادرات، احجز القاعات، وساهم في بناء مستقبل مشرق.
+                        المظلة الوطنية الشاملة لاحتضان وتنظيم العمل التطوعي في سلطنة عُمان، وتعزيز ثقافته وترسيخ قيمه في المجتمع.
+                    </p>
+                    <p className="text-lg md:text-xl text-gray-300 max-w-2xl leading-relaxed">
+                        انضم كمتطوع، أو سجّل مبادرتك، أو اعرض فرصة تطوعية عبر منصة موحدة وموثوقة
                     </p>
                     <div className="flex flex-wrap gap-4 pt-4">
                         <button className="rounded-full bg-cream px-8 py-3 font-bold text-navy transition hover:bg-white hover:shadow-[0_0_20px_rgba(239,232,186,0.5)]">

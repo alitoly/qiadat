@@ -15,12 +15,14 @@ export default function Navbar() {
     const items: CardNavItem[] = [
         {
             label: "عن المركز",
+            href: "/about",
+            ariaLabel: "About Center",
             bgColor: "#0D0716",
             textColor: "#fff",
             links: [
-                { label: "من نحن", href: "/about", ariaLabel: "About Company" },
-                { label: "الأهداف", href: "/objectives", ariaLabel: "Our Objectives" },
-                { label: "الشركاء والرعاة", href: "/partners", ariaLabel: "Our Partners" }
+                { label: "من نحن", href: "/about#who-we-are", ariaLabel: "About Company" },
+                { label: "الأهداف", href: "/about#objectives", ariaLabel: "Our Objectives" },
+                { label: "الشركاء والرعاة", href: "/about#partners", ariaLabel: "Our Partners" }
             ]
         },
         {

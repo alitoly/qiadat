@@ -15,6 +15,8 @@ export type CardNavItem = {
   bgColor: string;
   textColor: string;
   links: CardNavLink[];
+  href?: string;
+  ariaLabel?: string;
 };
 
 export interface CardNavProps {
@@ -193,7 +195,18 @@ const CardNav: React.FC<CardNavProps> = ({
               ref={setCardRef(idx)}
               style={{ backgroundColor: item.bgColor, color: item.textColor }}
             >
-              <div className="nav-card-label">{item.label}</div>
+              {item.href ? (
+                <a
+                  className="nav-card-label block no-underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white/20 rounded-lg"
+                  href={item.href}
+                  aria-label={item.ariaLabel || item.label}
+                  style={{ color: 'inherit' }}
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <div className="nav-card-label">{item.label}</div>
+              )}
               <div className="nav-card-links">
                 {item.links?.map((lnk, i) => (
                   <a key={`${lnk.label}-${i}`} className="nav-card-link" href={lnk.href} aria-label={lnk.ariaLabel}>
