@@ -3,7 +3,7 @@
 import CardNav, { CardNavItem } from "@/components/CardNav";
 import { useRouter } from "next/navigation";
 
-const logo = "/images/removebg-logo.png";
+const logo = "/images/logo-Gold.jpg";
 
 export default function Navbar() {
     const router = useRouter();

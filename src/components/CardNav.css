@@ -180,7 +180,9 @@
   }
 
   .card-nav-cta-button {
-    display: none;
+    /* Keep visible but maybe adjust padding/size if needed */
+    padding: 0 0.75rem;
+    font-size: 14px;
   }
 
   .card-nav-content {

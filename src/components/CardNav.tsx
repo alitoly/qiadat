@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useRef, useState } from 'react';
+import React, { useLayoutEffect, useRef, useState, useEffect } from 'react';
 import { gsap } from 'gsap';
 // use your own icon import if react-icons is not available
 import { GoArrowUpRight } from 'react-icons/go';
@@ -158,8 +158,37 @@ const CardNav: React.FC<CardNavProps> = ({
     if (el) cardsRef.current[i] = el;
   };
 
+  // Scroll logic
+  const [isVisible, setIsVisible] = useState(true);
+  const lastScrollY = useRef(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      // Always show at top or if scrolling up
+      if (currentScrollY < 10 || currentScrollY < lastScrollY.current) {
+        setIsVisible(true);
+      } else if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
+        // Hide when scrolling down and past 100px
+        setIsVisible(false);
+      }
+
+      lastScrollY.current = currentScrollY;
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <div className={`card-nav-container ${className}`}>
+    <div
+      className={`card-nav-container ${className}`}
+      style={{
+        transform: `translateX(-50%) translateY(${isVisible ? '0' : '-150%'})`,
+        transition: 'transform 0.3s ease-in-out'
+      }}
+    >
       <nav ref={navRef} className={`card-nav ${isExpanded ? 'open' : ''}`} style={{ backgroundColor: baseColor }}>
         <div className="card-nav-top">
           <div
@@ -172,6 +201,10 @@ const CardNav: React.FC<CardNavProps> = ({
           >
             <div className="hamburger-line" />
             <div className="hamburger-line" />
+          </div>
+
+          <div className="logo-container">
+            <img src={logo} alt={logoAlt} className="logo" />
           </div>
 
           <button

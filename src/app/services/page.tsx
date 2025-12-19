@@ -70,7 +70,7 @@ export default function ServicesPage() {
                 {/* Hall Booking Section */}
                 <section id="hall" className="scroll-mt-24 max-w-5xl mx-auto">
                     <div className="flex flex-col md:flex-row gap-12 items-start">
-                        <div className="md:w-1/3 sticky top-24 pt-4">
+                        <div className="md:w-1/3 md:sticky md:top-24 pt-4">
                             <h2 className="text-3xl font-bold text-navy mb-4 leading-tight">حجز القاعات</h2>
                             <p className="text-gray-600 leading-relaxed mb-6">
                                 هل تخطط لورشة عمل أو اجتماع لفريقك التطوعي؟ تحقق من توفر قاعاتنا واحجز المساحة المناسبة لك بكل سهولة.
