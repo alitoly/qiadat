@@ -3,7 +3,7 @@
 import CardNav, { CardNavItem } from "@/components/CardNav";
 import { useRouter } from "next/navigation";
 
-const logo = "/logo.jpg";
+const logo = "/images/removebg-logo.png";
 
 export default function Navbar() {
     const router = useRouter();
@@ -52,11 +52,11 @@ export default function Navbar() {
     return (
         <CardNav
             logo={logo}
-            logoAlt="شعار قيادات"
+            logoAlt=""
             items={items}
-            baseColor="#2C3358" // Dark navy to match theme
-            menuColor="#fef7e4ff"
-            buttonBgColor="#f8eeaeff" // Cream color
+            baseColor="#ffffffff" // Dark navy to match theme
+            menuColor="#2C3358"
+            buttonBgColor="#2C3358" // Cream color
             buttonTextColor="#1a1f3c" // Navy color
             ease="power3.out"
         />

@@ -1,7 +1,6 @@
 import HeroSection from "@/components/home/HeroSection";
 import NewsFeed from "@/components/home/NewsFeed";
 import UpcomingEvents from "@/components/home/UpcomingEvents";
-import PartnersLoop from "@/components/home/PartnersLoop";
 import GallerySection from "@/components/home/GallerySection";
 
 export default function Home() {
@@ -22,7 +21,6 @@ export default function Home() {
 
       <GallerySection />
 
-      <PartnersLoop />
     </div>
   );
 }

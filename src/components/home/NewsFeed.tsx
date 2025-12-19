@@ -31,8 +31,8 @@ export default function NewsFeed() {
     return (
         <section>
             <div className="flex items-center justify-between mb-8">
-                <h2 className="text-3xl font-bold text-navy">آخر الأخبار</h2>
-                <Link href="/media" className="group flex items-center gap-2 text-sm font-semibold text-navy hover:text-opacity-80">
+                <h2 className="text-3xl font-bold text-cream">آخر الأخبار</h2>
+                <Link href="/media" className="group flex items-center gap-2 text-sm font-semibold text-cream hover:text-opacity-80">
                     عرض جميع الأخبار <ArrowRight size={16} className="transition-transform group-hover:-translate-x-1 rotate-180" />
                 </Link>
             </div>
@@ -47,14 +47,14 @@ export default function NewsFeed() {
                                 alt={item.title}
                                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                             />
-                            <div className="absolute inset-0 bg-navy/10 group-hover:bg-navy/0 transition-colors"></div>
-                            <div className="absolute top-4 right-4 rounded-md bg-white/90 px-3 py-1 text-xs font-bold text-navy uppercase tracking-wider backdrop-blur-sm">
+                            <div className="absolute inset-0 bg-cream/10 group-hover:bg-cream/0 transition-colors"></div>
+                            <div className="absolute top-4 right-4 rounded-md bg-white/90 px-3 py-1 text-xs font-bold text-cream uppercase tracking-wider backdrop-blur-sm">
                                 {item.category}
                             </div>
                         </div>
                         <div>
                             <time className="text-sm text-gray-500 font-medium">{item.date}</time>
-                            <h3 className="mt-2 text-xl font-bold text-navy group-hover:text-opacity-80 leading-tight">
+                            <h3 className="mt-2 text-xl font-bold text-cream group-hover:text-opacity-80 leading-tight">
                                 {item.title}
                             </h3>
                         </div>

@@ -174,14 +174,11 @@ const CardNav: React.FC<CardNavProps> = ({
             <div className="hamburger-line" />
           </div>
 
-          <div className="logo-container">
-            <img src={logo} alt={logoAlt} className="logo" />
-          </div>
-
           <button
             type="button"
-            className="card-nav-cta-button"
-            style={{ backgroundColor: '#E8E0AA', color: '#2C3358' }}
+            className="card-nav-cta-button hover:brightness-110 transition-all"
+            style={{ backgroundColor: '#E8E0AA', color: '#2C3358', cursor: 'pointer' }}
+            onClick={() => window.location.href = '/'}
           >
             الرئيسية
           </button>
