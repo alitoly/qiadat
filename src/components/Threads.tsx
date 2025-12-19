@@ -129,9 +129,9 @@ void main() {
 `;
 
 const Threads: React.FC<ThreadsProps> = ({
-  color = [0, 0, 100],
-  amplitude = 1,
-  distance = 0,
+  color = [1, 1, 1],
+  amplitude = 0.5,
+  distance = 0.7,
   enableMouseInteraction = false,
   ...rest
 }) => {

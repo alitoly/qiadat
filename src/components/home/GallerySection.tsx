@@ -31,7 +31,7 @@ const galleryItems = [
 
 export default function GallerySection() {
     return (
-        <section className="py-24 bg-neutral-50 dark:bg-neutral-900 border-t border-neutral-200 dark:border-neutral-800">
+        <section className="py-24">
             <div className="container mx-auto px-4 md:px-6">
                 <h2 className="text-3xl font-bold mb-12 text-center text-neutral-900 dark:text-neutral-100">
                     معرض الصور

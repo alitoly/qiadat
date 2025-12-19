@@ -27,7 +27,7 @@ export default function RootLayout({
     <html lang="ar" dir="rtl">
       <body className={`${ibmPlexArabic.variable} font-sans antialiased min-h-screen flex flex-col relative`}>
         <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', zIndex: -1, opacity: 0.5 }}>
-          <Threads amplitude={1} distance={0} enableMouseInteraction={true} />
+          <Threads enableMouseInteraction={true} />
         </div>
         <Navbar />
         <main className="flex-1 flex flex-col">
