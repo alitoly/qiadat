@@ -17,7 +17,7 @@ export default function Navbar() {
             label: "عن المركز",
             href: "/about",
             ariaLabel: "About Center",
-            bgColor: "#4e04beff",
+            bgColor: "#2C3358",
             textColor: "#fff",
             links: [
                 { label: "من نحن", href: "/about#who-we-are", ariaLabel: "About Company" },
@@ -29,8 +29,8 @@ export default function Navbar() {
             label: "الخدمات",
             href: "/services",
             ariaLabel: "Our Services",
-            bgColor: "#ddb917ff",
-            textColor: "#fff",
+            bgColor: "#E8E0AA",
+            textColor: "#2C3358",
             links: [
                 { label: "طلب مبادرة", href: "/services#initiative", ariaLabel: "Request Initiative" },
                 { label: "حجز قاعة", href: "/services#hall", ariaLabel: "Book Hall" },
@@ -40,7 +40,7 @@ export default function Navbar() {
         },
         {
             label: "تواصل معنا",
-            bgColor: "#4e04beff",
+            bgColor: "#2C3358",
             textColor: "#fff",
             links: [
                 { label: "اتصل بنا", href: "/contact", ariaLabel: "Contact Us" },
@@ -54,9 +54,9 @@ export default function Navbar() {
             logo={logo}
             logoAlt="شعار قيادات"
             items={items}
-            baseColor="#090510" // Dark navy to match theme
-            menuColor="#fff"
-            buttonBgColor="#efe8ba" // Cream color
+            baseColor="#2C3358" // Dark navy to match theme
+            menuColor="#fef7e4ff"
+            buttonBgColor="#f8eeaeff" // Cream color
             buttonTextColor="#1a1f3c" // Navy color
             ease="power3.out"
         />
