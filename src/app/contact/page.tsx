@@ -54,9 +54,32 @@ export default function ContactPage() {
                         </div>
                     </div>
 
-                    {/* Map Placeholder */}
-                    <div className="bg-gray-200 rounded-2xl min-h-[400px] flex items-center justify-center text-gray-400">
-                        خريطة تفاعلية
+                    {/* Maps */}
+                    <div className="space-y-6">
+                        <div className="bg-white p-2 rounded-2xl shadow-sm border border-gray-100 h-[400px] overflow-hidden">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14625.6114076897!2d58.411872!3d23.589881!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e91ffa43052b8e9%3A0x936801d323b7e1ae!2z2LnZj9mF2KfZhiDYo9mB2YrZhtmK2YjYsiDZhdmI2YQ!5e0!3m2!1sar!2som!4v1766135985513!5m2!1sar!2som"
+                                width="100%"
+                                height="100%"
+                                style={{ border: 0 }}
+                                allowFullScreen
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                                className="w-full h-full rounded-xl"
+                            ></iframe>
+                        </div>
+                        <div className="bg-white p-2 rounded-2xl shadow-sm border border-gray-100 h-[400px] overflow-hidden">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3656.544988127873!2d58.146592!3d23.58478!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e8de323e486793d%3A0x4777598c68ae219d!2sSQUare!5e0!3m2!1sar!2som!4v1766136033881!5m2!1sar!2som"
+                                width="100%"
+                                height="100%"
+                                style={{ border: 0 }}
+                                allowFullScreen
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                                className="w-full h-full rounded-xl"
+                            ></iframe>
+                        </div>
                     </div>
                 </div>
             </div>
