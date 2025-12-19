@@ -166,7 +166,7 @@ const CardNav: React.FC<CardNavProps> = ({
             className={`hamburger-menu ${isHamburgerOpen ? 'open' : ''}`}
             onClick={toggleMenu}
             role="button"
-            aria-label={isExpanded ? 'Close menu' : 'Open menu'}
+            aria-label={isExpanded ? 'إغلاق القائمة' : 'فتح القائمة'}
             tabIndex={0}
             style={{ color: menuColor || '#000' }}
           >

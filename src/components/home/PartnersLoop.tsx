@@ -5,20 +5,20 @@ import { FaLandmark, FaHandsHelping, FaUniversity, FaBuilding, FaGlobe } from "r
 import { MdGroups } from "react-icons/md";
 
 const partners = [
-    { node: <FaLandmark />, title: "Ministry of Culture", href: "#" },
-    { node: <FaHandsHelping />, title: "Volunteer Oman", href: "#" },
-    { node: <FaUniversity />, title: "Sultan Qaboos Univ", href: "#" },
-    { node: <MdGroups />, title: "Youth Center", href: "#" },
-    { node: <FaBuilding />, title: "Oman LNG", href: "#" },
-    { node: <FaGlobe />, title: "UN Volunteers", href: "#" },
-    { node: <FaLandmark />, title: "Ministry of Social Dev", href: "#" },
+    { node: <FaLandmark />, title: "وزارة الثقافة", href: "#" },
+    { node: <FaHandsHelping />, title: "عمان التطوعية", href: "#" },
+    { node: <FaUniversity />, title: "جامعة السلطان قابوس", href: "#" },
+    { node: <MdGroups />, title: "مركز الشباب", href: "#" },
+    { node: <FaBuilding />, title: "الشركة العمانية للغاز", href: "#" },
+    { node: <FaGlobe />, title: "متطوعو الأمم المتحدة", href: "#" },
+    { node: <FaLandmark />, title: "وزارة التنمية الاجتماعية", href: "#" },
 ];
 
 export default function PartnersLoop() {
     return (
         <section className="py-12 bg-white border-t border-gray-100">
             <div className="container mx-auto px-4 mb-8 text-center">
-                <h2 className="text-2xl font-bold text-navy opacity-80">Our Strategic Partners</h2>
+                <h2 className="text-2xl font-bold text-navy opacity-80">شركاؤنا الاستراتيجيون</h2>
             </div>
 
             <div style={{ position: 'relative', overflow: 'hidden' }}>

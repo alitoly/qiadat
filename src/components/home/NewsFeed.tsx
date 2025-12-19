@@ -2,27 +2,28 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 // Sample Data
+// Sample Data
 const news = [
     {
         id: 1,
-        title: "Launch of the New Volunteering Season 2025",
-        date: "Dec 05, 2024",
-        image: "bg-blue-100", // placeholder class
-        category: "Announcements"
+        title: "انطلاق موسم التطوع الجديد 2025",
+        date: "05 ديسمبر 2024",
+        image: "/images/volunteer.png",
+        category: "إعلانات"
     },
     {
         id: 2,
-        title: "Partnership with Ministry of Culture and Sports",
-        date: "Nov 28, 2024",
-        image: "bg-green-100",
-        category: "Partnerships"
+        title: "شراكة استراتيجية مع وزارة الثقافة والرياضة",
+        date: "28 نوفمبر 2024",
+        image: "/images/sport.png",
+        category: "شراكات"
     },
     {
         id: 3,
-        title: "Community Beach Cleanup Success",
-        date: "Nov 20, 2024",
-        image: "bg-yellow-100",
-        category: "Events"
+        title: "حملة تنظيف الشواطئ تحقق نجاحاً باهراً",
+        date: "20 نوفمبر 2024",
+        image: "/images/clean.png",
+        category: "فعاليات"
     },
 ];
 
@@ -30,19 +31,24 @@ export default function NewsFeed() {
     return (
         <section>
             <div className="flex items-center justify-between mb-8">
-                <h2 className="text-3xl font-bold text-navy">Latest News</h2>
+                <h2 className="text-3xl font-bold text-navy">آخر الأخبار</h2>
                 <Link href="/media" className="group flex items-center gap-2 text-sm font-semibold text-navy hover:text-opacity-80">
-                    View All News <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+                    عرض جميع الأخبار <ArrowRight size={16} className="transition-transform group-hover:-translate-x-1 rotate-180" />
                 </Link>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {news.map((item) => (
                     <article key={item.id} className="group cursor-pointer flex flex-col gap-4">
-                        <div className={`aspect-video w-full rounded-xl ${item.image} relative overflow-hidden`}>
-                            {/* Placeholder for real image */}
-                            <div className="absolute inset-0 bg-navy/5 group-hover:bg-navy/0 transition-colors"></div>
-                            <div className="absolute top-4 left-4 rounded-md bg-white/90 px-3 py-1 text-xs font-bold text-navy uppercase tracking-wider backdrop-blur-sm">
+                        <div className={`aspect-video w-full rounded-xl relative overflow-hidden`}>
+                            {/* Real Image */}
+                            <img
+                                src={item.image}
+                                alt={item.title}
+                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            />
+                            <div className="absolute inset-0 bg-navy/10 group-hover:bg-navy/0 transition-colors"></div>
+                            <div className="absolute top-4 right-4 rounded-md bg-white/90 px-3 py-1 text-xs font-bold text-navy uppercase tracking-wider backdrop-blur-sm">
                                 {item.category}
                             </div>
                         </div>

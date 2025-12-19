@@ -3,21 +3,21 @@ import './LogoLoop.css';
 
 export type LogoItem =
   | {
-      node: React.ReactNode;
-      href?: string;
-      title?: string;
-      ariaLabel?: string;
-    }
+    node: React.ReactNode;
+    href?: string;
+    title?: string;
+    ariaLabel?: string;
+  }
   | {
-      src: string;
-      alt?: string;
-      href?: string;
-      title?: string;
-      srcSet?: string;
-      sizes?: string;
-      width?: number;
-      height?: number;
-    };
+    src: string;
+    alt?: string;
+    href?: string;
+    title?: string;
+    srcSet?: string;
+    sizes?: string;
+    width?: number;
+    height?: number;
+  };
 
 export interface LogoLoopProps {
   logos: LogoItem[];
@@ -195,7 +195,7 @@ export const LogoLoop = React.memo<LogoLoopProps>(
     fadeOutColor,
     scaleOnHover = false,
     renderItem,
-    ariaLabel = 'Partner logos',
+    ariaLabel = 'شعارات الشركاء',
     className,
     style
   }) => {
@@ -326,7 +326,7 @@ export const LogoLoop = React.memo<LogoLoopProps>(
           <a
             className="logoloop__link"
             href={(item as any).href}
-            aria-label={itemAriaLabel || 'logo link'}
+            aria-label={itemAriaLabel || 'رابط الشعار'}
             target="_blank"
             rel="noreferrer noopener"
           >
