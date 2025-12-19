@@ -51,8 +51,6 @@ export default function Navbar() {
 
     return (
         <CardNav
-            logo={logo}
-            logoAlt=""
             items={items}
             baseColor="#ffffffff" // Dark navy to match theme
             menuColor="#2C3358"

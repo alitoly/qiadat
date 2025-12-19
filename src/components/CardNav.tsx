@@ -20,8 +20,6 @@ export type CardNavItem = {
 };
 
 export interface CardNavProps {
-  logo: string;
-  logoAlt?: string;
   items: CardNavItem[];
   className?: string;
   ease?: string;
@@ -32,8 +30,6 @@ export interface CardNavProps {
 }
 
 const CardNav: React.FC<CardNavProps> = ({
-  logo,
-  logoAlt = 'Logo',
   items,
   className = '',
   ease = 'power3.out',
@@ -203,14 +199,10 @@ const CardNav: React.FC<CardNavProps> = ({
             <div className="hamburger-line" />
           </div>
 
-          <div className="logo-container">
-            <img src={logo} alt={logoAlt} className="logo" />
-          </div>
-
           <button
             type="button"
             className="card-nav-cta-button hover:brightness-110 transition-all"
-            style={{ backgroundColor: '#E8E0AA', color: '#2C3358', cursor: 'pointer' }}
+            style={{ backgroundColor: '#2C3358', color: '#ffffffff', cursor: 'pointer' }}
             onClick={() => window.location.href = '/'}
           >
             الرئيسية
