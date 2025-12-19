@@ -4,61 +4,69 @@ import { Calendar, MapPin } from "lucide-react";
 export default function EnrollmentPage() {
     const events = [
         {
-            title: "Muscat Marathon 2025",
-            date: "Jan 15, 2025",
-            location: "Al Mouj Muscat",
-            type: "Sports",
-            status: "Open"
+            title: "ماراثون مسقط 2025",
+            date: "15 يناير 2025",
+            location: "الموج مسقط",
+            type: "رياضة",
+            status: "مفتوح"
         },
         {
-            title: "National Day Celebrations",
-            date: "Nov 18, 2025",
-            location: "Various Locations",
-            type: "Culture",
-            status: "Upcoming"
+            title: "احتفالات العيد الوطني",
+            date: "18 نوفمبر 2025",
+            location: "مواقع متعددة",
+            type: "ثقافة",
+            status: "قريباً"
         },
         {
-            title: "Ramadan Charity Drive",
-            date: "Mar 10, 2025",
-            location: "Convention Center",
-            type: "Charity",
-            status: "Open"
+            title: "حملة إفطار صائم",
+            date: "10 مارس 2025",
+            location: "مركز للمؤتمرات",
+            type: "خيري",
+            status: "مفتوح"
         }
     ];
 
     return (
-        <div className="bg-gray-50 min-h-screen py-12">
+        <div className="bg-gray-50/50 min-h-screen py-16">
             <div className="container mx-auto px-4">
-                <h1 className="text-3xl font-bold text-navy mb-8">Event Enrollment</h1>
+                <div className="flex flex-col items-start gap-4 mb-10">
+                    <h1 className="text-4xl font-bold text-navy">الاشتراك في الفعاليات</h1>
+                    <p className="text-gray-600 max-w-2xl">
+                        استعرض الفعاليات المتاحة وكن جزءاً من الحراك التطوعي والمجتمعي في السلطنة.
+                    </p>
+                </div>
 
-                <div className="space-y-4">
+                <div className="grid gap-6">
                     {events.map((event, i) => (
-                        <div key={i} className="bg-white p-6 rounded-xl shadow-sm flex flex-col md:flex-row items-center justify-between gap-6 border border-gray-100">
-                            <div className="flex-1">
-                                <div className="flex items-center gap-3 mb-2">
-                                    <span className="px-3 py-1 bg-navy/10 text-navy text-xs font-bold rounded-full uppercase tracking-wide">
+                        <div key={i} className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 flex flex-col md:flex-row items-center justify-between gap-6 group">
+                            <div className="flex-1 text-center md:text-right w-full">
+                                <div className="flex items-center justify-center md:justify-start gap-3 mb-3">
+                                    <span className="px-3 py-1 bg-navy/5 text-navy text-xs font-bold rounded-full">
                                         {event.type}
                                     </span>
-                                    <span className={`px-3 py-1 text-xs font-bold rounded-full uppercase tracking-wide ${event.status === 'Open' ? 'bg-green-100 text-green-700' : 'bg-gray-100 text-gray-600'}`}>
+                                    <span className={`px-3 py-1 text-xs font-bold rounded-full ${event.status === 'مفتوح' ? 'bg-green-100 text-green-700' : 'bg-gray-100 text-gray-600'}`}>
                                         {event.status}
                                     </span>
                                 </div>
-                                <h3 className="text-xl font-bold text-navy mb-2">{event.title}</h3>
-                                <div className="flex items-center gap-6 text-sm text-gray-500">
+                                <h3 className="text-2xl font-bold text-navy mb-3 group-hover:text-amber-600 transition-colors">{event.title}</h3>
+                                <div className="flex flex-wrap items-center justify-center md:justify-start gap-x-6 gap-y-2 text-sm text-gray-500">
                                     <div className="flex items-center gap-2">
                                         <Calendar size={16} />
-                                        {event.date}
+                                        <span>{event.date}</span>
                                     </div>
                                     <div className="flex items-center gap-2">
                                         <MapPin size={16} />
-                                        {event.location}
+                                        <span>{event.location}</span>
                                     </div>
                                 </div>
                             </div>
 
-                            <div>
-                                <button className="w-full md:w-auto px-6 py-2.5 bg-navy text-white font-medium rounded-lg hover:bg-opacity-90 transition-colors disabled:bg-gray-300 disabled:cursor-not-allowed" disabled={event.status !== 'Open'}>
-                                    {event.status === 'Open' ? 'Register Now' : 'Coming Soon'}
+                            <div className="w-full md:w-auto">
+                                <button
+                                    className="w-full md:w-auto px-8 py-3 bg-navy text-white font-bold rounded-xl hover:bg-opacity-90 transition-all shadow-md hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed disabled:shadow-none"
+                                    disabled={event.status !== 'مفتوح'}
+                                >
+                                    {event.status === 'مفتوح' ? 'سجل الآن' : 'قريباً'}
                                 </button>
                             </div>
                         </div>

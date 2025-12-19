@@ -2,8 +2,9 @@ import { LoginForm } from "@/components/login-form"
 
 export default function LoginPage() {
     return (
-        <div className="bg-muted flex min-h-svh flex-col items-center justify-center p-6 md:p-10">
-            <div className="w-full max-w-sm md:max-w-4xl">
+        <div className="flex min-h-[calc(100vh-80px)] flex-col items-center justify-center p-4 md:p-10 relative">
+            {/* Background elements if needed, or keep clean */}
+            <div className="w-full max-w-sm">
                 <LoginForm />
             </div>
         </div>
