@@ -21,7 +21,7 @@ export default function Navbar() {
         <div className="site-navbar">
             <div className={`nav-inner ${scrolled ? 'scrolled' : 'transparent'}`}>
                 {/* Right-aligned (RTL) menu */}
-                <div className="nav-menu" dir="rtl">
+                <div className="nav-menu hidden md:flex" dir="rtl">
                     <div className="nav-item-group relative">
                         <button className="nav-link" aria-haspopup="true" onClick={toggle} aria-expanded={isOpen}>
                             عن المركز <span className="nav-caret">▾</span>
@@ -47,7 +47,7 @@ export default function Navbar() {
 
                 {/* Left side circle */}
                 <div className="flex items-center gap-3">
-                    <Link href="/login" className="flex items-center gap-2 nav-link hover:text-[var(--brand-gold)] transition-colors">
+                    <Link href="/login" className="hidden md:flex items-center gap-2 nav-link hover:text-[var(--brand-gold)] transition-colors">
                         <LogIn size={20} />
                         <span className="text-sm font-medium">تسجيل الدخول</span>
                     </Link>
