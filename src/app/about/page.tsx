@@ -114,17 +114,17 @@ export default function AboutPage() {
                                         <div className="w-16 h-16 rounded-2xl bg-[var(--brand-blue)]/80 backdrop-blur-sm flex items-center justify-center mb-6 shadow-lg border border-white/10">
                                             <Compass size={32} className="text-[var(--brand-gold)]" />
                                         </div>
-                                        <h2 className="text-4xl font-bold text-white">الرؤية</h2>
+                                        <h2 className="text-3xl md:text-4xl font-bold text-white">الرؤية</h2>
                                     </div>
                                 </div>
 
                                 {/* Back Face */}
-                                <div className="relative w-full h-full [transform:rotateY(180deg)] [backface-visibility:hidden] bg-[#5B6683] p-10 rounded-[2.5rem] border border-white/10 shadow-xl flex flex-col justify-center">
+                                <div className="relative w-full h-full [transform:rotateY(180deg)] [backface-visibility:hidden] bg-[#5B6683] p-6 md:p-10 rounded-[2.5rem] border border-white/10 shadow-xl flex flex-col justify-center">
                                     <div className="w-16 h-16 rounded-2xl bg-[var(--brand-blue)] flex items-center justify-center mb-8 shadow-lg shadow-[var(--brand-blue)]/40">
                                         <Compass size={32} className="text-[var(--brand-gold)]" />
                                     </div>
-                                    <h2 className="text-3xl font-bold mb-6 text-white">الرؤية</h2>
-                                    <p className="text-gray-100 leading-relaxed text-lg">
+                                    <h2 className="text-2xl md:text-3xl font-bold mb-6 text-white">الرؤية</h2>
+                                    <p className="text-gray-100 leading-relaxed text-base md:text-lg">
                                         أن يكون مركز عُمان التطوعي المنصة الوطنية الرائدة في تمكين العمل التطوعي وتعزيز أثره التنموي، وبناء مجتمع واعٍ ومبادرات مستدامة تسهم في تحقيق رؤية عُمان 2040.
                                     </p>
                                 </div>
@@ -154,17 +154,17 @@ export default function AboutPage() {
                                         <div className="w-16 h-16 rounded-2xl bg-[var(--brand-blue)]/80 backdrop-blur-sm flex items-center justify-center mb-6 shadow-lg border border-white/10">
                                             <Target size={32} className="text-[var(--brand-gold)]" />
                                         </div>
-                                        <h2 className="text-4xl font-bold text-white">الرسالة</h2>
+                                        <h2 className="text-3xl md:text-4xl font-bold text-white">الرسالة</h2>
                                     </div>
                                 </div>
 
                                 {/* Back Face */}
-                                <div className="relative w-full h-full [transform:rotateY(180deg)] [backface-visibility:hidden] bg-[#5B6683] p-10 rounded-[2.5rem] border border-white/10 shadow-xl flex flex-col justify-center">
+                                <div className="relative w-full h-full [transform:rotateY(180deg)] [backface-visibility:hidden] bg-[#5B6683] p-6 md:p-10 rounded-[2.5rem] border border-white/10 shadow-xl flex flex-col justify-center">
                                     <div className="w-16 h-16 rounded-2xl bg-[var(--brand-blue)] flex items-center justify-center mb-8 shadow-lg shadow-[var(--brand-blue)]/40">
                                         <Target size={32} className="text-[var(--brand-gold)]" />
                                     </div>
-                                    <h2 className="text-3xl font-bold mb-6 text-white">الرسالة</h2>
-                                    <p className="text-gray-100 leading-relaxed text-lg">
+                                    <h2 className="text-2xl md:text-3xl font-bold mb-6 text-white">الرسالة</h2>
+                                    <p className="text-gray-100 leading-relaxed text-base md:text-lg">
                                         تنظيم وتطوير العمل التطوعي في سلطنة عُمان عبر منصة وطنية متكاملة تربط المتطوعين بالفرص العامة والتخصصية، وتمكّن الجهات والمبادرات من تنفيذ أعمال تطوعية عالية الجودة ذات أثر تنموي.
                                     </p>
                                 </div>
