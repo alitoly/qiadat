@@ -73,7 +73,7 @@ export default function NewsFeed() {
                             </div>
 
                             {/* Title */}
-                            <h3 className="text-2xl font-bold text-white leading-tight group-hover:text-[var(--brand-gold)] transition-colors">
+                            <h3 className="text-2xl font-bold text-white leading-tight transition-colors">
                                 {item.title}
                             </h3>
 

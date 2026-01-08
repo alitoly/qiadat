@@ -256,6 +256,54 @@ export default function AboutPage() {
                     </div>
                 </div>
             </section>
+
+            {/* 5. Partners */}
+            <section id="partners" className="py-24 relative overflow-hidden">
+                {/* Background Elements */}
+                <div className="absolute top-0 right-0 w-96 h-96 bg-[var(--brand-gold)]/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
+                <div className="absolute bottom-0 left-0 w-96 h-96 bg-[var(--brand-blue)]/10 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2"></div>
+
+                <div className="container mx-auto px-4 relative z-10">
+                    <motion.div
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        variants={fadeIn}
+                        className="text-center mb-16"
+                    >
+                        <h2 className="text-3xl font-bold text-white mb-4">الشركاء</h2>
+                        <div className="w-24 h-1 bg-[var(--brand-gold)] mx-auto rounded-full"></div>
+                    </motion.div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 max-w-5xl mx-auto items-center">
+                        {[
+                            { name: "وزارة الثقافة والرياضة والشباب", img: "/images/sport1.png" },
+                            { name: "وزارة التنمية الاجتماعية", img: "/images/soci.png" },
+                            { name: "جهاز الاستثمار العماني", img: "/images/invest.jpeg" },
+                        ].map((partner, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: index * 0.2 }}
+                                className="group flex flex-col items-center justify-center p-8 bg-white/5 backdrop-blur-sm rounded-[2rem] border border-white/10 hover:border-[var(--brand-gold)]/30 hover:bg-white/10 transition-all duration-500"
+                            >
+                                <div className="h-32 w-full flex items-center justify-center mb-6 relative grayscale group-hover:grayscale-0 transition-all duration-500">
+                                    <img
+                                        src={partner.img}
+                                        alt={partner.name}
+                                        className="max-h-full max-w-full object-contain"
+                                    />
+                                </div>
+                                <h3 className="text-white font-bold text-center text-sm md:text-base opacity-80 group-hover:opacity-100 group-hover:text-[var(--brand-gold)] transition-all duration-300">
+                                    {partner.name}
+                                </h3>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+            </section>
         </div>
     );
 }
