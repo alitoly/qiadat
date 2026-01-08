@@ -69,7 +69,7 @@ export default function VolunteerRequestForm() {
     return (
         <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-                <label className="block text-sm font-medium text-navy mb-2">عنوان المبادرة / الفعالية</label>
+                <label className="block text-sm font-medium text-[#00B5AD] mb-2">عنوان المبادرة / الفعالية</label>
                 <div className="relative">
                     <Briefcase className="absolute right-3 top-3 text-gray-400" size={18} />
                     <input
@@ -85,7 +85,7 @@ export default function VolunteerRequestForm() {
             </div>
 
             <div>
-                <label className="block text-sm font-medium text-navy mb-2">عدد المتطوعين المطلوب</label>
+                <label className="block text-sm font-medium text-[#00B5AD] mb-2">عدد المتطوعين المطلوب</label>
                 <div className="relative">
                     <Users className="absolute right-3 top-3 text-gray-400" size={18} />
                     <input
@@ -105,7 +105,7 @@ export default function VolunteerRequestForm() {
             </div>
 
             <div>
-                <label className="block text-sm font-medium text-navy mb-2">تاريخ البدء</label>
+                <label className="block text-sm font-medium text-[#00B5AD] mb-2">تاريخ البدء</label>
                 <div className="relative">
                     <Calendar className="absolute right-3 top-3 text-gray-400" size={18} />
                     <input
@@ -126,7 +126,7 @@ export default function VolunteerRequestForm() {
             </div>
 
             <div>
-                <label className="block text-sm font-medium text-navy mb-2">الوصف</label>
+                <label className="block text-sm font-medium text-[#00B5AD] mb-2">الوصف</label>
                 <textarea
                     name="description"
                     rows={4}

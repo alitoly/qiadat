@@ -54,7 +54,7 @@ export default function BookingForm() {
     return (
         <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-                <label className="block text-sm font-medium text-navy mb-2">اختر التاريخ</label>
+                <label className="block text-sm font-medium text-[#00B5AD] mb-2">اختر التاريخ</label>
                 <div className="relative">
                     <Calendar className="absolute right-3 top-3 text-gray-400" size={18} />
                     <input
@@ -71,7 +71,7 @@ export default function BookingForm() {
             </div>
 
             <div>
-                <label className="block text-sm font-medium text-navy mb-2">اختر الوقت</label>
+                <label className="block text-sm font-medium text-[#00B5AD] mb-2">اختر الوقت</label>
                 <div className="grid grid-cols-4 gap-2">
                     {timeSlots.map((slot) => (
                         <button
