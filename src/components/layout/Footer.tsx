@@ -29,7 +29,7 @@ export default function Footer() {
                         <h4 className="font-semibold text-lg mb-4 text-[#D4AF37]">روابط سريعة</h4>
                         <ul className="space-y-2 text-sm text-gray-300">
                             <li><Link href="/about" className="hover:text-white transition-colors">عن المركز</Link></li>
-                            <li><Link href="/about#objectives" className="hover:text-white transition-colors">الأهداف</Link></li>
+                            <li><Link href="/objectives" className="hover:text-white transition-colors">الأهداف</Link></li>
                             <li><Link href="/services" className="hover:text-white transition-colors">الخدمات</Link></li>
                             <li><Link href="/#partners" className="hover:text-white transition-colors">الشركاء والرعاة</Link></li>
                         </ul>

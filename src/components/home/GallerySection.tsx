@@ -26,6 +26,30 @@ const galleryItems = [
         link: '',
         title: '',
         description: ''
+    },
+    {
+        image: 'images/pic5.png',
+        link: '',
+        title: '',
+        description: ''
+    },
+    {
+        image: 'images/hith.jpeg',
+        link: '',
+        title: '',
+        description: ''
+    },
+    {
+        image: 'images/vol.jpg',
+        link: '',
+        title: '',
+        description: ''
+    },
+    {
+        image: 'images/volonteer.jpg',
+        link: '',
+        title: '',
+        description: ''
     }
 ];
 

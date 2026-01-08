@@ -28,7 +28,7 @@ export default function Navbar() {
                         </button>
                         <div className="nav-dropdown" role="menu">
                             <Link href="/about#who-we-are" className="text-sm px-3 py-2 text-white">من نحن</Link>
-                            <Link href="/about#objectives" className="text-sm px-3 py-2 text-white">الأهداف</Link>
+                            <Link href="/objectives" className="text-sm px-3 py-2 text-white">الأهداف</Link>
                             <Link href="/about#vision" className="text-sm px-3 py-2 text-white">الرؤية والرسالة</Link>
                         </div>
                     </div>
