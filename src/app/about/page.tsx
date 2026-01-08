@@ -93,38 +93,82 @@ export default function AboutPage() {
                 <div className="container mx-auto px-4 relative z-10">
                     <div className="grid md:grid-cols-2 gap-8">
                         {/* Vision */}
+                        {/* Vision - Flip Card */}
                         <motion.div
                             initial="hidden"
                             whileInView="visible"
                             viewport={{ once: true }}
                             variants={fadeIn}
-                            className="bg-white/5 backdrop-blur-xl p-10 rounded-[2.5rem] border border-white/10 hover:border-[var(--brand-gold)]/50 transition-colors group"
+                            className="group h-full perspective-[1000px]"
                         >
-                            <div className="w-16 h-16 rounded-2xl bg-[var(--brand-blue)] flex items-center justify-center mb-8 shadow-lg shadow-[var(--brand-blue)]/40 group-hover:scale-110 transition-transform">
-                                <Compass size={32} className="text-[var(--brand-gold)]" />
+                            <div className="relative w-full h-full transition-all duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] rounded-[2.5rem]">
+                                {/* Front Face */}
+                                <div className="absolute inset-0 w-full h-full [backface-visibility:hidden] rounded-[2.5rem] overflow-hidden border border-white/10 shadow-xl">
+                                    <img
+                                        src="/images/vision.png"
+                                        alt="Vision"
+                                        className="w-full h-full object-cover"
+                                    />
+                                    {/* Overlay */}
+                                    <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center p-6 text-center">
+                                        <div className="w-16 h-16 rounded-2xl bg-[var(--brand-blue)]/80 backdrop-blur-sm flex items-center justify-center mb-6 shadow-lg border border-white/10">
+                                            <Compass size={32} className="text-[var(--brand-gold)]" />
+                                        </div>
+                                        <h2 className="text-4xl font-bold text-white">الرؤية</h2>
+                                    </div>
+                                </div>
+
+                                {/* Back Face */}
+                                <div className="relative w-full h-full [transform:rotateY(180deg)] [backface-visibility:hidden] bg-[#5B6683] p-10 rounded-[2.5rem] border border-white/10 shadow-xl flex flex-col justify-center">
+                                    <div className="w-16 h-16 rounded-2xl bg-[var(--brand-blue)] flex items-center justify-center mb-8 shadow-lg shadow-[var(--brand-blue)]/40">
+                                        <Compass size={32} className="text-[var(--brand-gold)]" />
+                                    </div>
+                                    <h2 className="text-3xl font-bold mb-6 text-white">الرؤية</h2>
+                                    <p className="text-gray-100 leading-relaxed text-lg">
+                                        أن يكون مركز عُمان التطوعي المنصة الوطنية الرائدة في تمكين العمل التطوعي وتعزيز أثره التنموي، وبناء مجتمع واعٍ ومبادرات مستدامة تسهم في تحقيق رؤية عُمان 2040.
+                                    </p>
+                                </div>
                             </div>
-                            <h2 className="text-3xl font-bold mb-6 text-white">الرؤية</h2>
-                            <p className="text-gray-300 leading-relaxed text-lg">
-                                أن يكون مركز عُمان التطوعي المنصة الوطنية الرائدة في تمكين العمل التطوعي وتعزيز أثره التنموي، وبناء مجتمع واعٍ ومبادرات مستدامة تسهم في تحقيق رؤية عُمان 2040.
-                            </p>
                         </motion.div>
 
                         {/* Mission */}
+                        {/* Mission - Flip Card */}
                         <motion.div
                             initial="hidden"
                             whileInView="visible"
                             viewport={{ once: true }}
                             variants={fadeIn}
                             transition={{ delay: 0.2 }}
-                            className="bg-white/5 backdrop-blur-xl p-10 rounded-[2.5rem] border border-white/10 hover:border-[var(--brand-green)]/50 transition-colors group"
+                            className="group h-full perspective-[1000px]"
                         >
-                            <div className="w-16 h-16 rounded-2xl bg-[var(--brand-green)]/20 flex items-center justify-center mb-8 shadow-lg shadow-[var(--brand-green)]/10 group-hover:scale-110 transition-transform">
-                                <Target size={32} className="text-[var(--brand-green)]" />
+                            <div className="relative w-full h-full transition-all duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] rounded-[2.5rem]">
+                                {/* Front Face */}
+                                <div className="absolute inset-0 w-full h-full [backface-visibility:hidden] rounded-[2.5rem] overflow-hidden border border-white/10 shadow-xl">
+                                    <img
+                                        src="/images/message.png"
+                                        alt="Mission"
+                                        className="w-full h-full object-cover"
+                                    />
+                                    {/* Overlay */}
+                                    <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center p-6 text-center">
+                                        <div className="w-16 h-16 rounded-2xl bg-[var(--brand-blue)]/80 backdrop-blur-sm flex items-center justify-center mb-6 shadow-lg border border-white/10">
+                                            <Target size={32} className="text-[var(--brand-gold)]" />
+                                        </div>
+                                        <h2 className="text-4xl font-bold text-white">الرسالة</h2>
+                                    </div>
+                                </div>
+
+                                {/* Back Face */}
+                                <div className="relative w-full h-full [transform:rotateY(180deg)] [backface-visibility:hidden] bg-[#5B6683] p-10 rounded-[2.5rem] border border-white/10 shadow-xl flex flex-col justify-center">
+                                    <div className="w-16 h-16 rounded-2xl bg-[var(--brand-blue)] flex items-center justify-center mb-8 shadow-lg shadow-[var(--brand-blue)]/40">
+                                        <Target size={32} className="text-[var(--brand-gold)]" />
+                                    </div>
+                                    <h2 className="text-3xl font-bold mb-6 text-white">الرسالة</h2>
+                                    <p className="text-gray-100 leading-relaxed text-lg">
+                                        تنظيم وتطوير العمل التطوعي في سلطنة عُمان عبر منصة وطنية متكاملة تربط المتطوعين بالفرص العامة والتخصصية، وتمكّن الجهات والمبادرات من تنفيذ أعمال تطوعية عالية الجودة ذات أثر تنموي.
+                                    </p>
+                                </div>
                             </div>
-                            <h2 className="text-3xl font-bold mb-6 text-white">الرسالة</h2>
-                            <p className="text-gray-300 leading-relaxed text-lg">
-                                تنظيم وتطوير العمل التطوعي في سلطنة عُمان عبر منصة وطنية متكاملة تربط المتطوعين بالفرص العامة والتخصصية، وتمكّن الجهات والمبادرات من تنفيذ أعمال تطوعية عالية الجودة ذات أثر تنموي.
-                            </p>
                         </motion.div>
                     </div>
                 </div>
