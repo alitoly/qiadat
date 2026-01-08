@@ -8,7 +8,7 @@ export default function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
                     {/* Brand */}
                     <div className="space-y-4">
-                        <h3 className="text-2xl font-bold text-cream">قيادات</h3>
+                        <h3 className="text-2xl font-bold text-cream">مركز عمان التطوعي</h3>
                         <p className="text-gray-400 text-sm leading-relaxed">
                             تمكين المتطوعين في عمان. تواصل، شارك، واصنع أثراً في المجتمع من خلال مبادراتنا.
                         </p>

@@ -27,6 +27,7 @@ export interface CardNavProps {
   menuColor?: string;
   buttonBgColor?: string;
   buttonTextColor?: string;
+  transparentAtTop?: boolean;
 }
 
 const CardNav: React.FC<CardNavProps> = ({
@@ -36,10 +37,12 @@ const CardNav: React.FC<CardNavProps> = ({
   baseColor = '#fff',
   menuColor,
   buttonBgColor,
-  buttonTextColor
+  buttonTextColor,
+  transparentAtTop = false
 }) => {
   const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const navRef = useRef<HTMLDivElement | null>(null);
   const cardsRef = useRef<HTMLDivElement[]>([]);
   const tlRef = useRef<gsap.core.Timeline | null>(null);
@@ -161,6 +164,7 @@ const CardNav: React.FC<CardNavProps> = ({
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
+      setIsScrolled(currentScrollY > 20);
 
       // Always show at top or if scrolling up
       if (currentScrollY < 10 || currentScrollY < lastScrollY.current) {
@@ -185,7 +189,14 @@ const CardNav: React.FC<CardNavProps> = ({
         transition: 'transform 0.3s ease-in-out'
       }}
     >
-      <nav ref={navRef} className={`card-nav ${isExpanded ? 'open' : ''}`} style={{ backgroundColor: baseColor }}>
+      <nav
+        ref={navRef}
+        className={`card-nav ${isExpanded ? 'open' : ''} ${isScrolled ? 'scrolled' : ''} ${transparentAtTop && !isScrolled && !isExpanded ? 'transparent-top' : ''}`}
+        style={{
+          backgroundColor: (transparentAtTop && !isScrolled && !isExpanded) ? 'transparent' : baseColor,
+          backdropFilter: (transparentAtTop && isScrolled && !isExpanded) ? 'blur(12px)' : 'none',
+        }}
+      >
         <div className="card-nav-top">
           <div
             className={`hamburger-menu ${isHamburgerOpen ? 'open' : ''}`}

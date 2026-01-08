@@ -2,18 +2,26 @@ import * as React from "react"
 
 import { cn } from "@/lib/utils"
 
-function Card({ className, ...props }: React.ComponentProps<"div">) {
+type CardProps = React.ComponentProps<'div'> & { tone?: 'purple' | 'blue' | 'neutral' }
+
+function Card({ className, tone = 'purple', ...props }: CardProps) {
+  const toneClass = tone === 'purple'
+    ? 'card-tone-purple bg-gradient-to-br from-[hsl(var(--brand-purple)/0.12)] to-transparent'
+    : tone === 'blue'
+      ? 'card-tone-blue bg-gradient-to-br from-[hsl(var(--brand-blue)/0.12)] to-transparent'
+      : 'bg-white text-[var(--brand-blue)]';
+
   return (
     <div
       data-slot="card"
       className={cn(
-        "bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm",
+        `text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm ${toneClass}`,
         className
       )}
       {...props}
     />
   )
-}
+} 
 
 function CardHeader({ className, ...props }: React.ComponentProps<"div">) {
   return (

@@ -1,4 +1,8 @@
-import { Target, Compass, Heart, Users, Star, Shield, Zap, Globe } from "lucide-react";
+"use client";
+
+import React from "react";
+import { Target, Compass, Heart, Users, Star, Shield, Zap, Globe, ArrowLeft } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function AboutPage() {
     const objectives = [
@@ -13,133 +17,197 @@ export default function AboutPage() {
         "استدامة العمل التطوعي عبر تصميم برامج طويلة المدى تعزز استمرارية المبادرات وتوسّع أثرها."
     ];
 
+    const values = [
+        { name: "المواطنة", icon: Shield },
+        { name: "روح الفريق", icon: Users },
+        { name: "الابتكار", icon: Zap },
+        { name: "التمكين", icon: Star },
+        { name: "الاستدامة", icon: Globe },
+        { name: "الشراكة", icon: Heart },
+    ];
+
+    const fadeIn = {
+        hidden: { opacity: 0, y: 30 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+    };
+
     return (
-        <div className="bg-white min-h-screen">
-            {/* Header / Who We Are Section */}
-            <section id="who-we-are" className="bg-navy py-20 text-white scroll-mt-20">
-                <div className="container mx-auto px-4 text-center">
-                    <h1 className="text-4xl font-bold mb-4">من نحن</h1>
-                    <p className="opacity-90 max-w-2xl mx-auto leading-relaxed">
-                        يُعدّ مركز عُمان التطوعي المظلة الوطنية الشاملة لاحتضان وتنظيم الأنشطة والمبادرات التطوعية في السلطنة، انسجامًا مع رؤية وزارة الثقافة والرياضة والشباب واستراتيجيتها الرامية إلى تعزيز ثقافة العمل التطوعي وترسيخ قيمه في المجتمع العُماني.
-                    </p>
+        <div className="bg-[var(--brand-blue)] min-h-screen text-white overflow-hidden">
+
+            {/* 1. Who We Are (Alternating Layout) */}
+            <section id="who-we-are" className="relative py-24 scroll-mt-20">
+                <div className="container mx-auto px-4">
+                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                        <motion.div
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true }}
+                            variants={fadeIn}
+                        >
+                            <div className="inline-block px-4 py-1.5 rounded-full bg-[var(--brand-gold)]/20 text-[var(--brand-gold)] font-bold mb-6 text-sm border border-[var(--brand-gold)]/30">
+                                عن المركز
+                            </div>
+                            <h1 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">
+                                المظلة الوطنية الشاملة <br />
+                                <span className="text-[var(--brand-gold)]">للعمل التطوعي</span>
+                            </h1>
+                            <p className="text-gray-300 text-lg leading-loose mb-8 text-justify">
+                                يُعدّ مركز عُمان التطوعي المظلة الوطنية الشاملة لاحتضان وتنظيم الأنشطة والمبادرات التطوعية في السلطنة، انسجامًا مع رؤية وزارة الثقافة والرياضة والشباب واستراتيجيتها الرامية إلى تعزيز ثقافة العمل التطوعي وترسيخ قيمه في المجتمع العُماني، ليكون ركيزة أساسية في التنمية المستدامة.
+                            </p>
+                            <div className="flex gap-4">
+                                <div className="p-4 rounded-2xl bg-white/5 border border-white/10">
+                                    <h3 className="text-3xl font-bold text-[var(--brand-gold)] mb-1">+500</h3>
+                                    <p className="text-sm text-gray-400">مبادرة تطوعية</p>
+                                </div>
+                                <div className="p-4 rounded-2xl bg-white/5 border border-white/10">
+                                    <h3 className="text-3xl font-bold text-[var(--brand-gold)] mb-1">+20k</h3>
+                                    <p className="text-sm text-gray-400">ساعة تطوع</p>
+                                </div>
+                            </div>
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0, x: -50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8 }}
+                            className="relative"
+                        >
+                            <div className="relative aspect-square md:aspect-[4/3] rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl">
+                                <img src="/images/volunteering.jpg" alt="About Oman Volunteering" className="object-cover w-full h-full hover:scale-105 transition-transform duration-700" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-[var(--brand-blue)]/80 to-transparent"></div>
+                            </div>
+                            {/* Decorative element */}
+                            <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-[var(--brand-gold)] rounded-full blur-[80px] opacity-20"></div>
+                        </motion.div>
+                    </div>
                 </div>
             </section>
 
-            {/* Vision & Mission */}
-            <section className="py-16 container mx-auto px-4 relative z-10">
-                <div className="grid md:grid-cols-2 gap-12">
-                    <div className="bg-white/80 backdrop-blur-md p-8 rounded-3xl border border-white/50 shadow-xl shadow-navy/5 transform hover:scale-[1.02] transition-all duration-300">
-                        <div className="flex items-center gap-4 mb-6">
-                            <div className="p-4 bg-navy/10 text-navy rounded-2xl">
-                                <Compass size={32} strokeWidth={1.5} />
-                            </div>
-                            <h2 className="text-3xl font-bold text-navy">الرؤية</h2>
-                        </div>
-                        <p className="text-gray-700 leading-loose text-lg font-medium">
-                            أن يكون مركز عُمان التطوعي المنصة الوطنية الرائدة في تمكين العمل التطوعي وتعزيز أثره التنموي، وبناء مجتمع واعٍ ومبادرات مستدامة تسهم في تحقيق رؤية عُمان 2040.
-                        </p>
-                    </div>
-
-                    <div className="bg-white/80 backdrop-blur-md p-8 rounded-3xl border border-white/50 shadow-xl shadow-navy/5 transform hover:scale-[1.02] transition-all duration-300">
-                        <div className="flex items-center gap-4 mb-6">
-                            <div className="p-4 bg-cream/20 text-navy rounded-2xl">
-                                <Target size={32} strokeWidth={1.5} />
-                            </div>
-                            <h2 className="text-3xl font-bold text-navy">الرسالة</h2>
-                        </div>
-                        <p className="text-gray-700 leading-loose text-lg font-medium">
-                            تنظيم وتطوير العمل التطوعي في سلطنة عُمان عبر منصة وطنية متكاملة تربط المتطوعين بالفرص العامة والتخصصية، وتمكّن الجهات والمبادرات من تنفيذ أعمال تطوعية عالية الجودة ذات أثر تنموي.
-                        </p>
-                    </div>
+            {/* 2. Vision & Mission (Cards) */}
+            <section className="py-24 bg-black/20 relative">
+                <div className="absolute inset-0 overflow-hidden">
+                    <div className="absolute -right-[20%] top-[20%] w-[600px] h-[600px] bg-[var(--brand-green)]/10 rounded-full blur-[100px]"></div>
                 </div>
-            </section>
-
-            {/* Values */}
-            <section className="py-20 relative overflow-hidden">
-                <div className="absolute inset-0 bg-navy/5 -skew-y-3 transform origin-top-left z-0"></div>
 
                 <div className="container mx-auto px-4 relative z-10">
-                    <h2 className="text-4xl font-bold text-center text-navy mb-16">قيمنا الراسخة</h2>
+                    <div className="grid md:grid-cols-2 gap-8">
+                        {/* Vision */}
+                        <motion.div
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true }}
+                            variants={fadeIn}
+                            className="bg-white/5 backdrop-blur-xl p-10 rounded-[2.5rem] border border-white/10 hover:border-[var(--brand-gold)]/50 transition-colors group"
+                        >
+                            <div className="w-16 h-16 rounded-2xl bg-[var(--brand-blue)] flex items-center justify-center mb-8 shadow-lg shadow-[var(--brand-blue)]/40 group-hover:scale-110 transition-transform">
+                                <Compass size={32} className="text-[var(--brand-gold)]" />
+                            </div>
+                            <h2 className="text-3xl font-bold mb-6 text-white">الرؤية</h2>
+                            <p className="text-gray-300 leading-relaxed text-lg">
+                                أن يكون مركز عُمان التطوعي المنصة الوطنية الرائدة في تمكين العمل التطوعي وتعزيز أثره التنموي، وبناء مجتمع واعٍ ومبادرات مستدامة تسهم في تحقيق رؤية عُمان 2040.
+                            </p>
+                        </motion.div>
+
+                        {/* Mission */}
+                        <motion.div
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true }}
+                            variants={fadeIn}
+                            transition={{ delay: 0.2 }}
+                            className="bg-white/5 backdrop-blur-xl p-10 rounded-[2.5rem] border border-white/10 hover:border-[var(--brand-green)]/50 transition-colors group"
+                        >
+                            <div className="w-16 h-16 rounded-2xl bg-[var(--brand-green)]/20 flex items-center justify-center mb-8 shadow-lg shadow-[var(--brand-green)]/10 group-hover:scale-110 transition-transform">
+                                <Target size={32} className="text-[var(--brand-green)]" />
+                            </div>
+                            <h2 className="text-3xl font-bold mb-6 text-white">الرسالة</h2>
+                            <p className="text-gray-300 leading-relaxed text-lg">
+                                تنظيم وتطوير العمل التطوعي في سلطنة عُمان عبر منصة وطنية متكاملة تربط المتطوعين بالفرص العامة والتخصصية، وتمكّن الجهات والمبادرات من تنفيذ أعمال تطوعية عالية الجودة ذات أثر تنموي.
+                            </p>
+                        </motion.div>
+                    </div>
+                </div>
+            </section>
+
+            {/* 3. Values (Grid) */}
+            <section className="py-24 relative">
+                <div className="container mx-auto px-4">
+                    <motion.div
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        variants={fadeIn}
+                        className="text-center mb-16"
+                    >
+                        <h2 className="text-3xl font-bold text-white mb-4">قيمنا الراسخة</h2>
+                        <div className="w-24 h-1 bg-[var(--brand-gold)] mx-auto rounded-full"></div>
+                    </motion.div>
+
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-                        {[
-                            { name: "المواطنة", icon: Shield },
-                            { name: "روح الفريق", icon: Users },
-                            { name: "الابتكار", icon: Zap },
-                            { name: "التمكين", icon: Star },
-                            { name: "الاستدامة", icon: Globe },
-                            { name: "الشراكة", icon: Heart },
-                        ].map((value, i) => {
+                        {values.map((value, i) => {
                             const Icon = value.icon;
                             return (
-                                <div key={i} className="group flex flex-col items-center text-center p-6 bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-transparent hover:border-cream/50">
-                                    <div className="mb-4 text-navy/40 group-hover:text-cream transition-colors duration-300 transform group-hover:scale-110">
-                                        <Icon size={36} strokeWidth={1.5} />
+                                <motion.div
+                                    key={i}
+                                    initial={{ opacity: 0, scale: 0.9 }}
+                                    whileInView={{ opacity: 1, scale: 1 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: i * 0.1 }}
+                                    className="group flex flex-col items-center justify-center p-8 bg-white/5 backdrop-blur-sm rounded-3xl border border-white/5 hover:bg-white/10 transition-all duration-300 hover:-translate-y-2"
+                                >
+                                    <div className="mb-4 text-[var(--brand-gold)] group-hover:text-white transition-colors duration-300">
+                                        <Icon size={32} strokeWidth={1.5} />
                                     </div>
-                                    <h3 className="font-bold text-navy text-lg">{value.name}</h3>
-                                </div>
+                                    <h3 className="font-bold text-white text-lg">{value.name}</h3>
+                                </motion.div>
                             )
                         })}
                     </div>
                 </div>
             </section>
 
-            {/* Objectives Section */}
-            <section id="objectives" className="py-24 bg-white scroll-mt-20 relative">
-                <div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-30 pointer-events-none">
-                    <div className="absolute -top-[20%] -right-[10%] w-[50%] h-[50%] bg-cream/20 rounded-full blur-3xl"></div>
-                    <div className="absolute top-[40%] -left-[10%] w-[40%] h-[40%] bg-navy/5 rounded-full blur-3xl"></div>
-                </div>
-
-                <div className="container mx-auto px-4 relative z-10">
-                    <div className="text-center mb-16">
-                        <span className="text-cream font-bold tracking-wider uppercase text-sm mb-2 block">استراتيجيتنا</span>
-                        <h2 className="text-4xl font-bold text-navy">الأهداف الاستراتيجية</h2>
-                    </div>
-
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {objectives.map((obj, i) => (
-                            <div key={i} className="bg-white p-8 rounded-3xl shadow-lg shadow-gray-100 hover:shadow-xl hover:shadow-navy/5 border border-gray-50 transition-all duration-300 group relative overflow-hidden">
-                                <div className="absolute top-0 right-0 w-2 h-full bg-gradient-to-b from-navy to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                                <span className="text-6xl font-bold text-gray-100 mb-6 block group-hover:text-cream/20 transition-colors absolute top-4 left-6 select-none -z-10">
-                                    {(i + 1).toString().padStart(2, '0')}
-                                </span>
-                                <p className="text-lg font-medium text-gray-700 leading-relaxed relative z-10">
-                                    {obj}
-                                </p>
+            {/* 4. Objectives (List style) */}
+            <section id="objectives" className="py-24 bg-white/5 scroll-mt-20">
+                <div className="container mx-auto px-4">
+                    <div className="grid lg:grid-cols-3 gap-12">
+                        {/* Title Block */}
+                        <motion.div
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true }}
+                            variants={fadeIn}
+                            className="lg:col-span-1"
+                        >
+                            <span className="text-[var(--brand-gold)] font-bold tracking-wider uppercase text-sm mb-4 block">استراتيجيتنا</span>
+                            <h2 className="text-4xl font-bold text-white leading-tight mb-6">الأهداف <br /> الاستراتيجية</h2>
+                            <p className="text-gray-400 leading-relaxed mb-8">
+                                نسعى لتحقيق نقلة نوعية في العمل التطوعي من خلال مجموعة من الأهداف المترابطة التي تخدم الفرد والمجتمع.
+                            </p>
+                            <div className="hidden lg:block w-full aspect-square rounded-3xl overflow-hidden relative">
+                                <img src="/images/about-vision.jpg" alt="Objectives" className="w-full h-full object-cover opacity-60 grayscale hover:grayscale-0 transition-all duration-500" />
                             </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
+                        </motion.div>
 
-            {/* Partners Section */}
-            <section id="partners" className="bg-navy py-24 scroll-mt-20 text-white relative isolate overflow-hidden">
-                <div className="absolute inset-0 bg-navy opacity-90 z-0"></div>
-                {/* Optional: Add Threads or texture here */}
-
-                <div className="container mx-auto px-4 text-center relative z-10">
-                    <h2 className="text-4xl font-bold mb-16">الشركاء والرعاة</h2>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center items-center">
-                        <div className="bg-white/5 backdrop-blur-sm p-8 rounded-3xl border border-white/10 hover:bg-white/10 transition-colors group">
-                            <div className="w-full h-32 bg-white/5 rounded-2xl flex items-center justify-center mb-6 text-white/30 group-hover:text-white/50 transition-colors">
-                                Logo
-                            </div>
-                            <h3 className="font-bold text-lg">وزارة الثقافة والرياضة والشباب</h3>
-                        </div>
-
-                        {/* Placeholder for more partners */}
-                        <div className="bg-white/5 backdrop-blur-sm p-8 rounded-3xl border border-white/10 hover:bg-white/10 transition-colors group opacity-70 hover:opacity-100">
-                            <div className="w-full h-32 bg-white/5 rounded-2xl flex items-center justify-center mb-6 text-white/30 group-hover:text-white/50 transition-colors">
-                                Logo
-                            </div>
-                            <h3 className="font-bold text-lg">شريك استراتيجي</h3>
-                        </div>
-                        <div className="bg-white/5 backdrop-blur-sm p-8 rounded-3xl border border-white/10 hover:bg-white/10 transition-colors group opacity-70 hover:opacity-100">
-                            <div className="w-full h-32 bg-white/5 rounded-2xl flex items-center justify-center mb-6 text-white/30 group-hover:text-white/50 transition-colors">
-                                Logo
-                            </div>
-                            <h3 className="font-bold text-lg">راعي بلاتيني</h3>
+                        {/* Objectives Grid */}
+                        <div className="lg:col-span-2 grid md:grid-cols-2 gap-6">
+                            {objectives.map((obj, i) => (
+                                <motion.div
+                                    key={i}
+                                    initial={{ opacity: 0, x: 20 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: i * 0.05 }}
+                                    className="flex gap-4 p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-[var(--brand-blue)] hover:bg-[var(--brand-blue)]/30 transition-colors"
+                                >
+                                    <span className="flex-shrink-0 w-8 h-8 rounded-full bg-[var(--brand-gold)]/20 text-[var(--brand-gold)] flex items-center justify-center font-bold text-sm border border-[var(--brand-gold)]/20">
+                                        {i + 1}
+                                    </span>
+                                    <p className="text-gray-300 text-sm leading-relaxed font-medium">
+                                        {obj}
+                                    </p>
+                                </motion.div>
+                            ))}
                         </div>
                     </div>
                 </div>
