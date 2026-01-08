@@ -33,19 +33,4 @@ A modern, responsive web platform for the Oman Volunteer Center (Qiadat), built 
    ```
    Open [http://localhost:3000](http://localhost:3000) with your browser.
 
-3. **Build for Production**:
-   ```bash
-   npm run build
-   ```
-
-## Project Structure
-
-- `src/app`: App Router pages.
-- `src/components`: Reusable components (Forms, UI, Layout).
-- `public`: Static assets.
-
-## Key Components
-
-- **BookingForm**: `src/components/forms/BookingForm.tsx` (Handles Hall Booking logic).
-- **VolunteerRequestForm**: `src/components/forms/VolunteerRequestForm.tsx` (Handles date logic based on volunteer count).
-- **Navbar**: `src/components/layout/Navbar.tsx` (Sticky, responsive).
+3. **Visit https://qiadat-liart.vercel.app/ to view the site**
