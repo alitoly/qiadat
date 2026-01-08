@@ -2,6 +2,7 @@ import { Calendar, MapPin, Lock, Briefcase, ChevronLeft } from "lucide-react";
 import Link from "next/link";
 import BookingForm from "@/components/forms/BookingForm";
 import VolunteerRequestForm from "@/components/forms/VolunteerRequestForm";
+import InitiativeForm from "@/components/forms/InitiativeForm";
 
 export default function ServicesPage() {
     const events = [
@@ -37,34 +38,63 @@ export default function ServicesPage() {
                 <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[#687492]/30 rounded-full blur-[80px] translate-y-1/3 -translate-x-1/4"></div>
             </div>
 
-            {/* Header */}
-            <div className="container mx-auto px-4 text-center mb-20 relative z-10">
-                <h1 className="text-5xl font-bold mb-6 text-white drop-shadow-sm">الخدمات</h1>
-                <p className="text-gray-200 max-w-2xl mx-auto leading-relaxed text-lg font-medium">
-                    نقدم مجموعة واسعة من الخدمات الرقمية والميدانية لدعم وتعزيز العمل التطوعي في السلطنة.
-                </p>
+            {/* Hero Section */}
+            <div className="relative w-full h-[50vh] mb-20 overflow-hidden">
+                <div
+                    className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                    style={{ backgroundImage: "url('/images/sss.png')" }}
+                >
+                    <div className="absolute inset-0 bg-black/60"></div>
+                </div>
+
+                <div className="relative z-10 container mx-auto px-4 h-full flex flex-col justify-center items-center text-center pt-20">
+                    <h1 className="text-6xl font-bold text-white mb-6 drop-shadow-lg">الخدمات</h1>
+                    <p className="text-gray-200 max-w-2xl text-xl font-medium drop-shadow-md">
+                        نقدم مجموعة واسعة من الخدمات الرقمية والميدانية لدعم وتعزيز العمل التطوعي في السلطنة.
+                    </p>
+                </div>
             </div>
 
             <div className="container mx-auto px-4 relative z-10 space-y-24 pb-24">
 
-                {/* Initiative Section */}
-                <section id="initiative" className="scroll-mt-24">
-                    <div className="bg-white/5 backdrop-blur-md rounded-[2.5rem] p-8 md:p-14 text-center max-w-4xl mx-auto border border-white/10 shadow-2xl hover:bg-white/10 transition-colors duration-500 group">
-                        <div className="w-20 h-20 rounded-2xl bg-[#D4AF37]/20 flex items-center justify-center mb-8 text-[#D4AF37] mx-auto group-hover:scale-110 transition-transform duration-500">
-                            <Lock size={32} strokeWidth={1.5} />
-                        </div>
-                        <h2 className="text-3xl font-bold text-white mb-6">طلب مبادرة</h2>
-                        <p className="text-gray-300 mb-10 max-w-lg mx-auto text-lg">
-                            انطلق بأفكارك التطوعية. يجب أن تكون مسجلاً لدينا لتقديم مقترحات لمبادرات جديدة.
-                        </p>
 
-                        <div className="flex flex-col sm:flex-row justify-center gap-4">
-                            <Link href="/login" className="inline-flex justify-center items-center px-10 py-4 rounded-xl bg-[#D4AF37] text-[#1B1F3B] font-bold hover:bg-white hover:text-[#1B1F3B] transition-all shadow-lg hover:shadow-xl active:scale-95">
-                                تسجيل الدخول
-                            </Link>
-                            <Link href="/register" className="inline-flex justify-center items-center px-10 py-4 rounded-xl border border-white/30 text-white font-bold hover:bg-white hover:text-[#1B1F3B] transition-all active:scale-95 hover:border-transparent">
-                                إنشاء حساب جديد
-                            </Link>
+                {/* Initiative Section */}
+                <section id="initiative" className="scroll-mt-24 max-w-6xl mx-auto">
+                    <div className="flex flex-col lg:flex-row gap-16 items-start">
+                        <div className="lg:w-5/12 pt-4">
+                            <div className="p-8 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-md">
+                                <div className="w-16 h-16 rounded-2xl bg-[#D4AF37]/20 flex items-center justify-center mb-6 text-[#D4AF37]">
+                                    <Lock size={32} strokeWidth={1.5} />
+                                </div>
+                                <h2 className="text-3xl font-bold text-white mb-6 leading-tight flex items-center gap-3">
+                                    <span className="w-2 h-8 bg-[#D4AF37] rounded-full block"></span>
+                                    طلب مبادرة
+                                </h2>
+                                <p className="text-gray-300 leading-relaxed mb-8 text-lg">
+                                    لديك فكرة تطوعية مبتكرة؟ نحن هنا لتحويلها إلى واقع. قدم مقترحك الآن وسنساعدك في التخطيط والتنفيذ.
+                                </p>
+                                <ul className="space-y-4 text-gray-300">
+                                    <li className="flex items-center gap-3">
+                                        <div className="w-2 h-2 rounded-full bg-[#D4AF37]"></div>
+                                        <span className="font-medium">دراسة الجدوى والأثر المجتمعي</span>
+                                    </li>
+                                    <li className="flex items-center gap-3">
+                                        <div className="w-2 h-2 rounded-full bg-[#D4AF37]"></div>
+                                        <span className="font-medium">توفير الدعم اللوجستي والمادي</span>
+                                    </li>
+                                    <li className="flex items-center gap-3">
+                                        <div className="w-2 h-2 rounded-full bg-[#D4AF37]"></div>
+                                        <span className="font-medium">الترويج للمبادرة إعلامياً</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div className="lg:w-7/12 w-full">
+                            <div className="bg-white rounded-[2rem] p-8 md:p-10 shadow-2xl overflow-hidden relative border border-white/50">
+                                <div className="absolute top-0 right-0 w-32 h-32 bg-[#D4AF37]/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+                                <InitiativeForm />
+                            </div>
                         </div>
                     </div>
                 </section>

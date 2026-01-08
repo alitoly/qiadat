@@ -24,11 +24,11 @@ export default function ObjectivesPage() {
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {objectives.map((obj, i) => (
-                        <div key={i} className="bg-white p-8 rounded-2xl shadow-sm border-t-4 border-navy hover:shadow-lg transition-shadow group">
-                            <span className="text-5xl font-bold text-gray-100 mb-4 block group-hover:text-cream/50 transition-colors">
+                        <div key={i} className="bg-white p-8 rounded-2xl shadow-sm border-t-4 border-navy hover:bg-[var(--brand-purple)] hover:border-[var(--brand-purple)] hover:shadow-xl transition-all duration-300 group">
+                            <span className="text-5xl font-bold text-gray-100 mb-4 block group-hover:text-white/20 transition-colors">
                                 {(i + 1).toString().padStart(2, '0')}
                             </span>
-                            <p className="text-lg font-medium text-navy leading-relaxed">
+                            <p className="text-lg font-medium text-navy leading-relaxed group-hover:text-white transition-colors">
                                 {obj}
                             </p>
                         </div>
