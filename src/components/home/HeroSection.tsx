@@ -13,13 +13,18 @@ const SLIDES = [
     },
     {
         id: 2,
-        image: "/images/omanvision.jpg",
-        alt: "رؤية عمان 2040",
+        image: "/images/volunteering.jpg",
+        alt: "العمل التطوعي في عمان",
     },
     {
         id: 3,
-        image: "/images/volunteering.jpg",
-        alt: "العمل التطوعي في عمان",
+        image: "/images/vol.jpg",
+        alt: "مبادرات تطوعية",
+    },
+    {
+        id: 4,
+        image: "/images/hith.jpeg",
+        alt: "حضرة صاحب الجلالة",
     },
 ];
 
@@ -87,7 +92,7 @@ export default function HeroSection() {
             </AnimatePresence>
 
             {/* Overlay: Purple → Blue gradient for brand */}
-            <div className="absolute inset-0 hero-gradient pointer-events-none" /> 
+            <div className="absolute inset-0 hero-gradient pointer-events-none" />
 
             {/* Content Layer */}
             <div
@@ -129,8 +134,8 @@ export default function HeroSection() {
                             key={index}
                             onClick={() => goToSlide(index)}
                             className={`h-1.5 rounded-full transition-all duration-300 ${index === currentDisplayIndex
-                                    ? "w-12 bg-[var(--brand-gold)]"
-                                    : "w-4 bg-white/40 hover:bg-white/60"
+                                ? "w-12 bg-[var(--brand-gold)]"
+                                : "w-4 bg-white/40 hover:bg-white/60"
                                 }`}
                             aria-label={`Go to slide ${index + 1}`}
                         />

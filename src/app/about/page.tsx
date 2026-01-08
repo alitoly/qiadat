@@ -74,7 +74,7 @@ export default function AboutPage() {
                             className="relative"
                         >
                             <div className="relative aspect-square md:aspect-[4/3] rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl">
-                                <img src="/images/volunteering.jpg" alt="About Oman Volunteering" className="object-cover w-full h-full hover:scale-105 transition-transform duration-700" />
+                                <img src="/images/vol.jpg" alt="About Oman Volunteering" className="object-cover w-full h-full hover:scale-105 transition-transform duration-700" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-[var(--brand-blue)]/80 to-transparent"></div>
                             </div>
                             {/* Decorative element */}
@@ -211,51 +211,7 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            {/* 4. Objectives (List style) */}
-            <section id="objectives" className="py-24 bg-white/5 scroll-mt-20">
-                <div className="container mx-auto px-4">
-                    <div className="grid lg:grid-cols-3 gap-12">
-                        {/* Title Block */}
-                        <motion.div
-                            initial="hidden"
-                            whileInView="visible"
-                            viewport={{ once: true }}
-                            variants={fadeIn}
-                            className="lg:col-span-1"
-                        >
-                            <span className="text-[var(--brand-gold)] font-bold tracking-wider uppercase text-sm mb-4 block">استراتيجيتنا</span>
-                            <h2 className="text-4xl font-bold text-white leading-tight mb-6">الأهداف <br /> الاستراتيجية</h2>
-                            <p className="text-gray-400 leading-relaxed mb-8">
-                                نسعى لتحقيق نقلة نوعية في العمل التطوعي من خلال مجموعة من الأهداف المترابطة التي تخدم الفرد والمجتمع.
-                            </p>
-                            <div className="hidden lg:block w-full aspect-square rounded-3xl overflow-hidden relative">
-                                <img src="/images/about-vision.jpg" alt="Objectives" className="w-full h-full object-cover opacity-60 grayscale hover:grayscale-0 transition-all duration-500" />
-                            </div>
-                        </motion.div>
 
-                        {/* Objectives Grid */}
-                        <div className="lg:col-span-2 grid md:grid-cols-2 gap-6">
-                            {objectives.map((obj, i) => (
-                                <motion.div
-                                    key={i}
-                                    initial={{ opacity: 0, x: 20 }}
-                                    whileInView={{ opacity: 1, x: 0 }}
-                                    viewport={{ once: true }}
-                                    transition={{ delay: i * 0.05 }}
-                                    className="flex gap-4 p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-[var(--brand-blue)] hover:bg-[var(--brand-blue)]/30 transition-colors"
-                                >
-                                    <span className="flex-shrink-0 w-8 h-8 rounded-full bg-[var(--brand-gold)]/20 text-[var(--brand-gold)] flex items-center justify-center font-bold text-sm border border-[var(--brand-gold)]/20">
-                                        {i + 1}
-                                    </span>
-                                    <p className="text-gray-300 text-sm leading-relaxed font-medium">
-                                        {obj}
-                                    </p>
-                                </motion.div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            </section>
 
             {/* 5. Partners */}
             <section id="partners" className="py-24 relative overflow-hidden">
