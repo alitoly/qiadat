@@ -54,6 +54,13 @@ export default function Navbar() {
                     <button className="nav-circle" aria-label="Profile / Language">ع</button>
                 </div>
 
+                {/* Mobile Quick Links */}
+                <div className="md:hidden flex flex-1 items-center justify-center gap-2 pl-14">
+                    <Link href="/services#initiative" className="text-[10px] font-bold text-white hover:text-[var(--brand-gold)] transition-colors whitespace-nowrap">طلب مبادرة</Link>
+                    <Link href="/services#enrollment" className="text-[10px] font-bold text-white hover:text-[var(--brand-gold)] transition-colors whitespace-nowrap">الاشتراك في فعالية</Link>
+                    <Link href="/services#volunteer" className="text-[10px] font-bold text-white hover:text-[var(--brand-gold)] transition-colors whitespace-nowrap">طلب متطوعين</Link>
+                </div>
+
                 {/* Mobile hamburger */}
                 <div className="md:hidden absolute left-6 top-3">
                     <button onClick={toggle} className="p-2 rounded-md border border-white/10 bg-white/5">
