@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { Home } from "lucide-react";
+import { Home, LogIn } from "lucide-react";
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -19,7 +19,7 @@ export default function Navbar() {
 
     return (
         <div className="site-navbar">
-            <div className={`nav-inner ${scrolled ? 'scrolled' : 'transparent'}`}> 
+            <div className={`nav-inner ${scrolled ? 'scrolled' : 'transparent'}`}>
                 {/* Right-aligned (RTL) menu */}
                 <div className="nav-menu" dir="rtl">
                     <div className="nav-item-group relative">
@@ -33,17 +33,7 @@ export default function Navbar() {
                         </div>
                     </div>
 
-                    <Link href="/services" className="nav-link">الخدمات</Link>
-
-                    <div className="nav-item-group relative">
-                        <button className="nav-link" aria-haspopup="true">
-                            تواصل معنا <span className="nav-caret">▾</span>
-                        </button>
-                        <div className="nav-dropdown" role="menu">
-                            <Link href="/contact" className="text-sm px-3 py-2 text-white">اتصل بنا</Link>
-                            <Link href="/faq" className="text-sm px-3 py-2 text-white">الأسئلة الشائعة</Link>
-                        </div>
-                    </div>
+                    <Link href="/contact" className="nav-link">تواصل معنا</Link>
 
                     <Link href="/services#initiative" className="nav-link">طلب مبادرة</Link>
                     <Link href="/services#hall" className="nav-link">حجز قاعة</Link>
@@ -57,6 +47,10 @@ export default function Navbar() {
 
                 {/* Left side circle */}
                 <div className="flex items-center gap-3">
+                    <Link href="/login" className="flex items-center gap-2 nav-link hover:text-[var(--brand-gold)] transition-colors">
+                        <LogIn size={20} />
+                        <span className="text-sm font-medium">تسجيل الدخول</span>
+                    </Link>
                     <button className="nav-circle" aria-label="Profile / Language">ع</button>
                 </div>
 
@@ -76,8 +70,8 @@ export default function Navbar() {
                     <div className="absolute top-20 right-4 bg-white/5 backdrop-blur-md rounded-lg p-4 w-64 text-right" dir="rtl" onClick={(e) => e.stopPropagation()}>
                         <Link href="/" className="block py-2 px-3 text-white">الرئيسية</Link>
                         <Link href="/about#who-we-are" className="block py-2 px-3 text-white">عن المركز</Link>
-                        <Link href="/services" className="block py-2 px-3 text-white">الخدمات</Link>
                         <Link href="/contact" className="block py-2 px-3 text-white">تواصل معنا</Link>
+                        <Link href="/login" className="block py-2 px-3 text-white">تسجيل الدخول</Link>
                     </div>
                 </div>
             )}
