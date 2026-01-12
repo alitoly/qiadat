@@ -3,6 +3,13 @@ import Link from "next/link";
 import BookingForm from "@/components/forms/BookingForm";
 import VolunteerRequestForm from "@/components/forms/VolunteerRequestForm";
 import InitiativeForm from "@/components/forms/InitiativeForm";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "الخدمات | مركز عمان التطوعي",
+    description: "اكتشف خدمات مركز عمان التطوعي: طلب مبادرات، حجز قاعات، والاشتراك في الفعاليات والفرص التطوعية.",
+};
+
 
 export default function ServicesPage() {
     const events = [

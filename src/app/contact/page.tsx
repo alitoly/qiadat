@@ -1,6 +1,10 @@
-"use client";
-
+import { Metadata } from "next";
 import { Mail, MapPin, Phone, Clock } from "lucide-react";
+
+export const metadata: Metadata = {
+    title: "تواصل معنا | مركز عمان التطوعي",
+    description: "تواصل مع مركز عمان التطوعي عبر الهاتف أو البريد الإلكتروني أو زيارة مقرنا في مسقط.",
+};
 
 export default function ContactPage() {
     return (

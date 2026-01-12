@@ -1,6 +1,4 @@
-"use client";
-// Force rebuild
-
+import { Metadata } from "next";
 import {
     Megaphone,
     ClipboardList,
@@ -12,6 +10,11 @@ import {
     BarChart3,
     Leaf
 } from "lucide-react";
+
+export const metadata: Metadata = {
+    title: "أهدافنا | مركز عمان التطوعي",
+    description: "تعرف على الأهداف الاستراتيجية لمركز عمان التطوعي ورؤيتنا لمستقبل العمل التطوعي في السلطنة.",
+};
 
 export default function ObjectivesPage() {
     const objectives = [

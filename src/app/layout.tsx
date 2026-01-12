@@ -12,8 +12,26 @@ const ibmPlexArabic = IBM_Plex_Sans_Arabic({
 });
 
 export const metadata: Metadata = {
-  title: "Qiadat | مركز عمان التطوعي",
-  description: "المنصة الرسمية لمركز عمان التطوعي",
+  title: "مركز عمان التطوعي",
+  description: "المنصة الرسمية لمركز عمان التطوعي. انضم إلينا في بناء مستقبل التطوع في سلطنة عمان. اكتشف الفرص التطوعية، وسجل في الفعاليات، وكن جزءاً من التغيير الإيجابي.",
+  keywords: ["مركز عمان التطوعي", "تطوع", "عمان", "Oman Volunteer Center", "Volunteer Oman", "فرص تطوعية", "سلطنة عمان", "خدمة المجتمع"],
+  openGraph: {
+    title: "مركز عمان التطوعي ",
+    description: "المنصة الرسمية لمركز عمان التطوعي. انضم إلينا في بناء مستقبل التطوع في سلطنة عمان.",
+    url: "https://volunteerom.org", // Placeholder or actual if known, good for SEO to have structure
+    siteName: "مركز عمان التطوعي",
+    locale: "ar_OM",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "مركز عمان التطوعي",
+    description: "المنصة الرسمية لمركز عمان التطوعي. انضم إلينا في بناء مستقبل التطوع في سلطنة عمان.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  }
 };
 
 import Threads from "@/components/Threads";

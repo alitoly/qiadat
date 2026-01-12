@@ -73,6 +73,7 @@ export default function HeroSection() {
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >
+            <h1 className="sr-only">مركز عمان التطوعي</h1>
             {/* Background Slider */}
             <AnimatePresence initial={false} mode="popLayout">
                 <motion.div
